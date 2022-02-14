@@ -1,116 +1,46 @@
-﻿<p align="center">
-  <img src="https://cdn.rawgit.com/alexdevero/react-typescript-styled-components-boilerplate/master/docs/react-typescript-webpack-boilerplate-icon.png" width="500" align="center">
-  <br>
-  <br>
-</p>
+# Getting Started with Create React App
 
-<p align="center">
-  <!--
-  ### Status
-  [![Build Status](https://circleci.com/gh/alexdevero/react-typescript-styled-components-boilerplate.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/alexdevero/react-typescript-styled-components-boilerplate/)
-  -->
-  <a href="https://david-dm.org/alexdevero/react-typescript-styled-components-boilerplate">
-    <img alt="Dependency Status" src="https://badgen.net/david/dep/alexdevero/react-typescript-styled-components-boilerplate.svg?style=flat">
-  </a>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-  <a href="https://david-dm.org/alexdevero/react-typescript-styled-components-boilerplate?type=dev">
-    <img alt="devDependency Status" src="https://badgen.net/david/dev/alexdevero/react-typescript-styled-components-boilerplate/dev-status.svg?style=flat">
-  </a>
+## Available Scripts
 
-  <a href="#">
-    <img alt="Releases" src="https://img.shields.io/github/release/alexdevero/react-typescript-styled-components-boilerplate.svg">
-  </a>
-</p>
+In the project directory, you can run:
 
-<p align="center">
-  <a href="https://alexdevero.com">
-    <img alt="Built by DEVERO" src="https://badgen.net/badge/build%20by/DEVERO/d30320" />
-  </a>
+### `npm start`
 
-  <a href="http://opensource.org/licenses/MIT">
-    <img alt="MIT License" src="https://badgen.net/badge/license/MIT/green">
-  </a>
-</p>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## React - TypeScript - Styled-component boilerplate
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Minimal React, TypeScript and Styled-components web app boilerplate.
+### `npm test`
 
-### Table of contents
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-* [Install](#install)
-* [Usage](#usage)
-* [Support this project](#support-this-project)
-* [Code of Conduct](#code-of-conduct)
-* [License](#license)
+### `npm run build`
 
-### Install
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-#### Clone this repo
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```
-$ git clone https://github.com/alexdevero/react-typescript-styled-components-boilerplate.git
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### Install dependencies
+### `npm run eject`
 
-```
-yarn
-```
-or
-```
-npm install
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### Usage
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-#### Start project on local server (go to localhost:1337)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-```
-yarn start
-```
-or
-```
-npm start
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-#### Build project (in "dist" folder):
+## Learn More
 
-```
-yarn run build
-```
-or
-```
-npm run build
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-#### Test project
-
-```
-yarn test
-```
-or
-```
-npm test
-```
-
-### Support this project
-
-<!-- This project is released as an open-source. If you need help with using this project, please ask and I will do my best reply to as soon as possible. You can use this project as you wish *for free*. Also, you can change the source code and redistribute it if you want. -->
-
-Development and maintenance of this project takes a lot of time. If you want to support this project and help its author, there are few ways you can do it:
-
- - Starring and sharing the project
- - [![Donate](https://img.shields.io/badge/Donate-Paypal-brightgreen.svg?colorB=259cd2)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YKLGUUB34ASEL)—make one-time donations via PayPal.
- - [![Donate](https://img.shields.io/badge/Donate-Patreon-brightgreen.svg?colorB=f86213)](https://www.patreon.com/alexdevero)—set up monthly donation via Patreon and get interesting news about what I'm doing.
- - <img alt="Releases" src="https://img.shields.io/badge/Donate-Bitcoin-brightgreen.svg?colorB=fab915">—send bitcoins or ethereum to this address: `19jHGagJWeVvuNjN3kaBoAszXd9ea9gKzp`.
-
-Thank you!
-
-### Code of Conduct
-
-[Contributor Code of Conduct](code-of-conduct.md). By participating in this project you agree to abide by its terms.
-
-### License
-
-MIT © [Alex Devero](https://alexdevero.com).
+To learn React, check out the [React documentation](https://reactjs.org/).
