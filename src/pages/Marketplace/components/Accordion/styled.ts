@@ -42,5 +42,5 @@ export const AccordionBody = styled.div<{ expanded: boolean }>`
     padding: 0;
   `}
   transition: height 0.2s ease-in-out;
-  /* overflow: hidden; */
+  overflow: hidden;
 `

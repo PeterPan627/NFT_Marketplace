@@ -52,7 +52,7 @@ const SkillFilter: React.FC<Props> = ({
     });
   };
 
-  const formatOptionLabel = (props: any) => {
+  const renderOptionItem = (props: any) => {
     const { label, customAbbreviation } = props;
     return (
       <OptionItemWrapper>
@@ -67,12 +67,43 @@ const SkillFilter: React.FC<Props> = ({
     );
   };
 
+  const renderSuggestionOptions = () => {
+    const selectedValues = selectedOptions.map((item) => item?.value);
+    let resultElements = [],
+      index = 0;
+    while (resultElements.length < 5 && index < SkillParams.length) {
+      const crrElement = SkillParams[index];
+      const isSelected = selectedValues.includes(crrElement.value);
+      if (!isSelected)
+        resultElements.push(
+          <SkillFilterSelectedItem
+            key={index}
+            onClick={() =>
+              handleChangeSelect({
+                label: crrElement.name,
+                value: crrElement.value,
+                customAbbreviation: `${crrElement.image}&&${crrElement.type}`,
+              })
+            }
+          >
+            <SelectedItemImage image={crrElement.image} />
+            <SelectedItemLabel>
+              <div>{crrElement.name}</div>
+              <div>{crrElement.type}</div>
+            </SelectedItemLabel>
+          </SkillFilterSelectedItem>
+        );
+      index++;
+    }
+    return resultElements;
+  };
+
   const renderSkillFilter = () => {
     return (
       <>
         <StyledSelect
           value={null}
-          formatOptionLabel={formatOptionLabel}
+          formatOptionLabel={renderOptionItem}
           options={[...Array(20)].map((item, index) => ({
             label: SkillParams[index].name,
             value: SkillParams[index].value,
@@ -98,6 +129,10 @@ const SkillFilter: React.FC<Props> = ({
               </SkillFilterSelectedItem>
             );
           })}
+        </SelectedOptionPanel>
+        <SelectedOptionPanel>
+          <SkillFilterItemName>SUGGESTION</SkillFilterItemName>
+          {renderSuggestionOptions()}
         </SelectedOptionPanel>
       </>
     );

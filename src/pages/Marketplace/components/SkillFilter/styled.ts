@@ -65,7 +65,7 @@ export const StyledSelect = styled(Select)`
         padding: 0;
       }
     }
-  }  
+  }
 `
 
 export const SelectedOptionPanel = styled.div`
@@ -88,6 +88,7 @@ export const SkillFilterSelectedItem = styled.p`
   display: flex;
   margin-top: 0;
   margin-bottom: 1rem;
+  cursor: pointer;
 `
 
 export const SelectedItemImage = styled.div<{ image: string }>`
