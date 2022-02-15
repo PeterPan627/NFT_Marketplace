@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 
-import { Filter, Navbar, GeneralFilter, SkillFilter } from "./components";
+import {
+  Filter,
+  Navbar,
+  GeneralFilter,
+  SkillFilter,
+  StatsFilter,
+} from "./components";
 
 import {
   BannerImage,
@@ -16,7 +22,6 @@ function Marketplace() {
     recruitCounter: { start: 0, end: 7 },
   });
 
-  console.log(filterCondition);
   return (
     <>
       <BannerImage />
@@ -27,12 +32,19 @@ function Marketplace() {
         <Navbar />
         <ContentsContainer>
           <FilterWrapper>
-            <Filter />
+            <Filter
+              filterCondition={filterCondition}
+              setFilterCondition={setFilterCondition}
+            />
             <GeneralFilter
               filterCondition={filterCondition}
               setFilterCondition={setFilterCondition}
             />
             <SkillFilter
+              filterCondition={filterCondition}
+              setFilterCondition={setFilterCondition}
+            />
+            <StatsFilter
               filterCondition={filterCondition}
               setFilterCondition={setFilterCondition}
             />

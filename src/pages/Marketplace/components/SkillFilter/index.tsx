@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { SkillParams } from "../../../../Constants";
 import Accordion from "../Accordion";
@@ -32,6 +32,10 @@ const SkillFilter: React.FC<Props> = ({
   setFilterCondition,
 }) => {
   const [selectedOptions, setSelectedOptions] = useState<OptionProps[]>([]);
+
+  useEffect(() => {
+    setSelectedOptions(filterCondition.skill || []);
+  }, [filterCondition]);
 
   const handleChangeSelect = (selectedOption: any) => {
     const selectedValues = selectedOptions.map((item) => item?.value);

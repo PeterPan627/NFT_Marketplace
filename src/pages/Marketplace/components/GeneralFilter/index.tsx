@@ -41,8 +41,8 @@ const GeneralFilter: React.FC<Props> = ({
   };
 
   const handleClickSlider = (index: number) => {
-    let newStart = filterCondition.recruitCounter.start;
-    let newEnd = filterCondition.recruitCounter.end;
+    let newStart = filterCondition.recruitCounter?.start || 0;
+    let newEnd = filterCondition.recruitCounter?.end || 7;
     if (index === newStart || index === newEnd) return;
     if (index < newStart) newStart = index;
     if (index > newEnd) newEnd = index;
@@ -62,11 +62,12 @@ const GeneralFilter: React.FC<Props> = ({
   };
 
   const renderCheckboxItem = (item: any, index: number, mainField: string) => {
+    const crrCondition = filterCondition[mainField] || {};
     return (
       <GeneralCheckBoxItem key={index}>
         <StyledCheckBox
           type="checkbox"
-          checked={filterCondition[`${mainField}.${item.key}`]}
+          checked={crrCondition[item.key]}
           onClick={(e) => handleClickCheckBox(e, mainField, item.key)}
         />
         <CheckBoxLabel style={item.image ? {} : { paddingLeft: "1.5rem" }}>
@@ -76,6 +77,11 @@ const GeneralFilter: React.FC<Props> = ({
       </GeneralCheckBoxItem>
     );
   };
+
+  console.log(filterCondition);
+
+  const conditionStart = filterCondition.recruitCounter?.start || 0;
+  const conditionEnd = filterCondition.recruitCounter?.end || 7;
 
   const renderGeneralFilter = () => {
     return (
@@ -95,14 +101,13 @@ const GeneralFilter: React.FC<Props> = ({
               <RecruitCountSlider>
                 <RecruitCountSliderLine />
                 <RecruitCountSliderLineSelected
-                  start={filterCondition.recruitCounter.start}
-                  end={filterCondition.recruitCounter.end}
+                  start={conditionStart}
+                  end={conditionEnd}
                 />
                 <RecruitCountSliderStepWrapper>
                   {[...Array(8)].map((item, index) => {
                     const active =
-                      index >= filterCondition.recruitCounter.start &&
-                      index <= filterCondition.recruitCounter.end;
+                      index >= conditionStart && index <= conditionEnd;
                     return (
                       <RecruitCountSliderStep
                         key={index}
@@ -116,8 +121,7 @@ const GeneralFilter: React.FC<Props> = ({
                 <RecruitCountSliderMarkWrapper>
                   {[...Array(8)].map((item, index) => {
                     const active =
-                      index >= filterCondition.recruitCounter.start &&
-                      index <= filterCondition.recruitCounter.end;
+                      index >= conditionStart && index <= conditionEnd;
                     return (
                       <RecruitCountSliderMark
                         key={index}
