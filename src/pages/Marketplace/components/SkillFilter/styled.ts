@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import Select from "react-select";
 
 export const OptionItemWrapper = styled.div`
@@ -13,13 +13,13 @@ export const OptionItemWrapper = styled.div`
   &:hover {
     background: #2e2d2b;
   }
-`
+`;
 
 export const OptionItem = styled.div`
   display: flex;
   color: white;
   align-items: center;
-`
+`;
 
 export const OptionImage = styled.div<{ image: string }>`
   --image-size: 30px;
@@ -29,7 +29,7 @@ export const OptionImage = styled.div<{ image: string }>`
   border-radius: 3px;
   background: ${({ image }) => `url(${image})`};
   background-size: var(--image-size) var(--image-size);
-`
+`;
 
 export const OptionLabel = styled.div`
   width: calc(100% - 20px);
@@ -41,45 +41,45 @@ export const OptionLabel = styled.div`
     font-weight: 400;
     font-size: 12px;
   }
-`
+`;
 
 export const StyledSelect = styled(Select)`
-  &>div {
+  & > div {
     background: #141b28;
     font-size: 1.4rem;
     color: #fbfbfb;
     padding: 0;
-    border: 1px solid rgba(163,255,37,.2);
+    border: 1px solid rgba(163, 255, 37, 0.2);
   }
-  &>div:last-of-type {
+  & > div:last-of-type {
     font-size: 1.4rem;
     max-height: 245px;
     text-align: left;
     border-radius: 0.25rem;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    &>div {
+    & > div {
       &::-webkit-scrollbar {
         width: 2px;
       }
-      &>div {
+      & > div {
         padding: 0;
       }
     }
   }
-`
+`;
 
 export const SelectedOptionPanel = styled.div`
   margin: 10px 0;
   border-bottom: 1px solid #555353;
-`
+`;
 
 export const SkillFilterItemName = styled.p`
   font-size: 1.2rem;
   margin-top: 0;
   margin-bottom: 1rem;
-`
+`;
 
-export const SkillFilterSelectedItem = styled.p`
+export const SkillFilterSelectedItem = styled.div`
   font-size: 1.4rem;
   color: #dfd5c7;
   line-height: 1.2;
@@ -89,7 +89,7 @@ export const SkillFilterSelectedItem = styled.p`
   margin-top: 0;
   margin-bottom: 1rem;
   cursor: pointer;
-`
+`;
 
 export const SelectedItemImage = styled.div<{ image: string }>`
   --image-size: 30px;
@@ -97,7 +97,7 @@ export const SelectedItemImage = styled.div<{ image: string }>`
   background-size: var(--image-size) var(--image-size);
   width: var(--image-size);
   height: var(--image-size);
-`
+`;
 
 export const SelectedItemLabel = styled.div`
   width: calc(100% - 20px);
@@ -135,4 +135,4 @@ export const SelectedItemLabel = styled.div`
       opacity: 0.75;
     }
   }
-`
+`;

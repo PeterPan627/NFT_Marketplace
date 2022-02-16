@@ -37,7 +37,6 @@ const StatsFilter: React.FC<Props> = ({
   };
 
   const renderSlider = (mainField: string) => {
-    mainField === "strength" && console.log(statsCondition);
     return (
       <Slider
         value={[

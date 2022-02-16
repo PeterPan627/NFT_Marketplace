@@ -9,7 +9,7 @@ const RarityParams = [
   },
   {
     name: "Super Rare",
-    key: "superRare",
+    key: "super_Rare",
   },
   {
     name: "Epic",

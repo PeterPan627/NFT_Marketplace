@@ -78,8 +78,6 @@ const GeneralFilter: React.FC<Props> = ({
     );
   };
 
-  console.log(filterCondition);
-
   const conditionStart = filterCondition.recruitCounter?.start || 0;
   const conditionEnd = filterCondition.recruitCounter?.end || 7;
 
