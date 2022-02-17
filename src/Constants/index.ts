@@ -5,3 +5,5 @@ export { default as SkillParams } from "./SkillParams";
 export { default as Heros } from "./Heros";
 export { default as SortParams } from "./SortParams";
 export { default as GraphQueryUrls } from "./GraphQueryUrls";
+export { default as WalletInfos } from "./WalletInfos";
+export { ConnectorNames, connectorsByName } from "./WalletInfos";

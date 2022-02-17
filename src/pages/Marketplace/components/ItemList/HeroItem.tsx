@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import {
   Item,
@@ -14,8 +15,14 @@ interface Props {
 }
 
 const ItemList: React.FC<Props> = ({ hero }) => {
+  let history = useHistory();
+
+  const handleClickHeroItem = (tokenId: number) => {
+    history.push(`/hero?tokenId=${tokenId}`);
+  };
+
   return (
-    <Item>
+    <Item onClick={() => handleClickHeroItem(hero.tokenId)}>
       <div>
         <ItemImage image="/assets/images/inventory/mapmini_angle.png">
           <ItemImageTopPart>

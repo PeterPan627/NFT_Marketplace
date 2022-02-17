@@ -39,6 +39,7 @@ export async function sendRequestByGraphQl({
     return result.data;
   } catch (err) {
     console.error("graphql error", err);
+    return null;
   }
 }
 

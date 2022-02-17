@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
- 
+import { createGlobalStyle } from "styled-components";
+
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -17,24 +17,26 @@ export default createGlobalStyle`
       background: #f1f1f1;
     }
   }
- 
+
   #root {
     margin: 0 auto;
   }
- 
+
   html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;    
+    background-size: cover;
     font-size: 10px;
   }
 
   body {
     background-color: #09101a;
+    line-height: 1.5;
+    /* font-family: Lato, sans-serif; */
   }
 
   .App {
-    
+
   }
 `;
