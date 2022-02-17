@@ -9,8 +9,11 @@ import {
   WalletConnectConnector,
 } from "@web3-react/walletconnect-connector";
 import { NoBscProviderError } from "@binance-chain/bsc-connector";
+import { toast } from "react-toastify";
+
 import { WalletInfos, ConnectorNames, connectorsByName } from "../../Constants";
 import useComponentVisible from "../../hooks/useComponentVisible";
+import { setupNetwork } from "../../utils/wallet";
 
 import {
   Container,
@@ -30,6 +33,9 @@ import {
   AccountDetail,
   AccountDetailTitle,
   AccountDetailAddress,
+  AccountDetailBalanceWrapper,
+  AccountDetailActionButton,
+  AccountDetailDivider,
 } from "./styled";
 
 const Navbar: React.FC = () => {
@@ -57,22 +63,20 @@ const Navbar: React.FC = () => {
       setModalIsOpen(false);
       console.log(connectorId);
       const connector = connectorsByName[connectorId];
-      console.log("connector", connector);
       if (connector) {
         activate(connector, async (error: Error) => {
           if (error instanceof UnsupportedChainIdError) {
-            // const hasSetup = await setupNetwork();
-            // if (hasSetup) {
-            //   activate(connector);
-            // }
-            console.error("UnsupportedChainIdError", error);
+            const hasSetup = await setupNetwork();
+            if (hasSetup) {
+              activate(connector);
+            }
           } else {
             window.localStorage.removeItem("connectorId");
             if (
               error instanceof NoEthereumProviderError ||
               error instanceof NoBscProviderError
             ) {
-              console.error("Provider Error", "No Provider was found");
+              toast.error("Provider Error: No Provider was found");
             } else if (
               error instanceof UserRejectedRequestErrorInjected ||
               error instanceof UserRejectedRequestErrorWalletConnect
@@ -81,9 +85,8 @@ const Navbar: React.FC = () => {
                 const walletConnector = connector as WalletConnectConnector;
                 walletConnector.walletConnectProvider = null;
               }
-              console.error(
-                "Authorization Error",
-                "Please authorize to access your account"
+              toast.error(
+                "Authorization Error: Please authorize to access your account"
               );
             } else {
               console.error("UnexpectedError", error.name, error.message);
@@ -91,10 +94,7 @@ const Navbar: React.FC = () => {
           }
         });
       } else {
-        console.error(
-          "Unable to find connector",
-          "The connector config is wrong"
-        );
+        toast.error("Unable to find connector: The connector config is wrong");
       }
     },
     [activate]
@@ -129,12 +129,33 @@ const Navbar: React.FC = () => {
             <AccountDetail ref={ref} visible={isComponentVisible}>
               <AccountDetailTitle>My Address</AccountDetailTitle>
               <AccountDetailAddress
-                onClick={() => navigator.clipboard.writeText(account)}
+                onClick={() => {
+                  navigator.clipboard.writeText(account);
+                  toast.success("Wallet address has been copied.");
+                }}
               >
                 {shortenString(account, 30)}
                 <i className="fa-solid fa-clone" />
               </AccountDetailAddress>
               <AccountDetailTitle>Balance</AccountDetailTitle>
+              <AccountDetailBalanceWrapper>
+                <div>
+                  <div>
+                    <img src="/assets/images/currency/eba.png" alt="" />
+                    <span>0 EBA</span>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img src="/assets/images/currency/meg.png" alt="" />
+                    <span>0 MEG</span>
+                  </div>
+                </div>
+              </AccountDetailBalanceWrapper>
+              <AccountDetailTitle>Actions</AccountDetailTitle>
+              <AccountDetailActionButton>Inventory</AccountDetailActionButton>
+              <AccountDetailDivider />
+              <AccountDetailActionButton>Disconnect</AccountDetailActionButton>
             </AccountDetail>
           </AccountInfoWrapper>
         ) : (

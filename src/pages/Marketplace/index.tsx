@@ -2,7 +2,12 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 import { Navbar } from "./components";
-import { AllHeros, HeroDetail } from "./components";
+import {
+  AllHeros,
+  AllEquipments,
+  HeroDetail,
+  EquipmentDetail,
+} from "./components";
 
 import {
   BannerImage,
@@ -23,9 +28,11 @@ const Marketplace: React.FC = () => {
         <Navbar />
         <ContentsContainer>
           <Switch>
-            <Route exact strict path="/" component={AllHeros} />
+            <Route exact strict path="/heros" component={AllHeros} />
+            <Route exact strict path="/equipments" component={AllEquipments} />
             <Route exact strict path="/hero" component={HeroDetail} />
-            <Redirect to="/" />
+            <Route exact strict path="/equipment" component={EquipmentDetail} />
+            <Redirect to="/heros" />
           </Switch>
         </ContentsContainer>
       </Contents>

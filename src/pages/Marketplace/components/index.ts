@@ -5,5 +5,5 @@ export { default as GeneralFilter } from "./GeneralFilter";
 export { default as SkillFilter } from "./SkillFilter";
 export { default as StatsFilter } from "./StatsFilter";
 export { default as ItemList } from "./ItemList";
-export { default as AllHeros } from "./AllHeros";
-export { default as HeroDetail } from "./HeroDetail";
+export { AllHeros, AllEquipments } from "./AllItemsList";
+export { HeroDetail, EquipmentDetail } from "./ItemDetail";

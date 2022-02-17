@@ -14,7 +14,7 @@ interface Props {
   hero: any;
 }
 
-const ItemList: React.FC<Props> = ({ hero }) => {
+const HeroItem: React.FC<Props> = ({ hero }) => {
   let history = useHistory();
 
   const handleClickHeroItem = (tokenId: number) => {
@@ -62,4 +62,4 @@ const ItemList: React.FC<Props> = ({ hero }) => {
   );
 };
 
-export default ItemList;
+export default HeroItem;

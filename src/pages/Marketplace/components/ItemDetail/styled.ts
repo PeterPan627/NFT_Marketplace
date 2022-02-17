@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const BackButton = styled.div`
   cursor: pointer;
   margin-top: 30px;
@@ -22,6 +27,7 @@ export const HeroDetailWrapper = styled.div`
   flex-wrap: wrap;
   color: #dfdfdf;
   font-size: 1.4rem;
+  width: 100%;
 `;
 
 export const HeroDetailImage = styled.div<{ backImage: string }>`
@@ -34,6 +40,9 @@ export const HeroDetailImage = styled.div<{ backImage: string }>`
   border-radius: 5px;
   max-width: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (min-width: 576px) {
     flex: 0 0 auto;
     width: 100%;
@@ -182,6 +191,20 @@ export const HeroIntroductionOwner = styled.div`
   color: #dfd5c7;
 `;
 
+export const EquipmentIntroductionRace = styled.div`
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  & > div {
+    font-weight: 700;
+    font-size: 18px;
+    & > img {
+      width: 41px;
+      height: 41px;
+    }
+  }
+`;
+
 export const HeroIntroductionStats = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -242,6 +265,29 @@ export const HeroIntroductionStatsItem = styled.div`
         margin-bottom: 1rem;
       }
     }
+  }
+`;
+
+export const EquipmentIntroductionStats = styled.div`
+  font-weight: 700;
+    font-size: 18px;
+    margin-top: 22px;
+    &>p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    &>div {
+      background: #3c3c3c;
+      padding: 12px 20px 20px;
+      font-size: 14px;
+    }
+}
+`;
+
+export const EquipmentIntroductionStatsItem = styled.div`
+  margin-top: 8px;
+  & > span {
+    margin-right: 5px;
   }
 `;
 

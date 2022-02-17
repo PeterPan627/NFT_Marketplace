@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  display: flex;
+`;
+
 export const FilterWrapper = styled.div`
   max-width: 100%;
   padding-right: 0.75rem;

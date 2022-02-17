@@ -344,3 +344,69 @@ export const AccountDetailAddress = styled.a`
     font-weight: 400;
   }
 `;
+
+export const AccountDetailBalanceWrapper = styled.div`
+  padding: 0.25rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  & > div {
+    flex: 0 0 auto;
+    width: 50%;
+    max-width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    & > div {
+      border-radius: 10px;
+      background: #32231f;
+      box-shadow: inset 20px 20px 60px #2b1e1a, inset -20px -20px 60px #3a2824;
+      color: #dfd5c7;
+      font-size: 1.3rem;
+      padding: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      & > img {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 5px;
+      }
+      & > span {
+        color: #dfd5c7;
+        font-size: 1.3rem;
+      }
+    }
+  }
+`;
+
+export const AccountDetailActionButton = styled.a`
+  font-size: 1.3rem;
+  color: #dfd5c7;
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  &:hover {
+    background: none;
+    text-shadow: 0 0 1.5rem #ffe788;
+  }
+`;
+
+export const AccountDetailDivider = styled.hr`
+  border: 0;
+  border-top: 1px solid rgba(155, 107, 94, 0.7);
+  height: 1px;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  background-color: currentColor;
+  opacity: 0.25;
+`;

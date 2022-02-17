@@ -6,14 +6,8 @@ import {
   sendRequestByGraphQl,
 } from "../../../../utils/fetch";
 
-import {
-  Filter,
-  GeneralFilter,
-  SkillFilter,
-  StatsFilter,
-  ItemList,
-} from "../../components";
-import { FilterWrapper, ContentsWrapper } from "./styled";
+import { Filter, GeneralFilter, SkillFilter, StatsFilter, ItemList } from "..";
+import { Wrapper, FilterWrapper, ContentsWrapper } from "./styled";
 
 const AllHeros: React.FC = () => {
   const [filterCondition, setFilterCondition] = useState<any>({
@@ -43,8 +37,9 @@ const AllHeros: React.FC = () => {
     };
     fetchData();
   }, [filterCondition]);
+
   return (
-    <>
+    <Wrapper>
       <FilterWrapper>
         <Filter
           filterCondition={filterCondition}
@@ -71,7 +66,7 @@ const AllHeros: React.FC = () => {
           setFilterCondition={setFilterCondition}
         />
       </ContentsWrapper>
-    </>
+    </Wrapper>
   );
 };
 

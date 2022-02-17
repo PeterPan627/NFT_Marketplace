@@ -53,6 +53,5 @@ export const Contents = styled.div`
 `;
 
 export const ContentsContainer = styled.div`
-  display: flex;
   padding-top: 20px;
 `;

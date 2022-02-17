@@ -116,21 +116,27 @@ export const Item = styled.div`
   }
 `;
 
-export const ItemImage = styled.div<{ image: string }>`
+export const ItemImage = styled.div<{ image: string; isEquipment?: boolean }>`
+  position: relative;
   background-image: ${({ image }) => `url(${image})`};
   border-radius: 5px;
   padding-bottom: 10px;
   background-size: cover;
   background-repeat: no-repeat;
+  ${({ isEquipment }) =>
+    isEquipment &&
+    `
+    padding: 60px 42px 20px;
+  `}
 `;
 
-export const ItemImageTopPart = styled.div`
+export const ItemImageTopPart = styled.div<{ isEquipment?: boolean }>`
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: ${({ isEquipment }) => (isEquipment ? 0 : "1rem")};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: ${({ isEquipment }) => (isEquipment ? 0 : "10px")};
   & > div:first-of-type {
     float: left;
     padding: 0 5px;
@@ -138,6 +144,13 @@ export const ItemImageTopPart = styled.div`
     & > img {
       width: 35px;
       height: 35px;
+      ${({ isEquipment }) =>
+        isEquipment &&
+        `
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      `}
     }
   }
   & > div:last-of-type {

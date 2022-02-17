@@ -22,11 +22,13 @@ import {
 } from "./styled";
 
 interface Props {
+  isEquipment?: boolean;
   filterCondition: any;
   setFilterCondition: any;
 }
 
 const GeneralFilter: React.FC<Props> = ({
+  isEquipment = false,
   filterCondition,
   setFilterCondition,
 }) => {
@@ -92,49 +94,51 @@ const GeneralFilter: React.FC<Props> = ({
             })}
           </GeneralFilterBody>
         </GeneralFilterItem>
-        <GeneralFilterItem key="recruit">
-          <GeneralFilterName>Recruit Count</GeneralFilterName>
-          <GeneralFilterBody>
-            <RecruitCountWrapper>
-              <RecruitCountSlider>
-                <RecruitCountSliderLine />
-                <RecruitCountSliderLineSelected
-                  start={conditionStart}
-                  end={conditionEnd}
-                />
-                <RecruitCountSliderStepWrapper>
-                  {[...Array(8)].map((item, index) => {
-                    const active =
-                      index >= conditionStart && index <= conditionEnd;
-                    return (
-                      <RecruitCountSliderStep
-                        key={index}
-                        index={index}
-                        active={active}
-                        onClick={() => handleClickSlider(index)}
-                      />
-                    );
-                  })}
-                </RecruitCountSliderStepWrapper>
-                <RecruitCountSliderMarkWrapper>
-                  {[...Array(8)].map((item, index) => {
-                    const active =
-                      index >= conditionStart && index <= conditionEnd;
-                    return (
-                      <RecruitCountSliderMark
-                        key={index}
-                        index={index}
-                        active={active}
-                      >
-                        {index}
-                      </RecruitCountSliderMark>
-                    );
-                  })}
-                </RecruitCountSliderMarkWrapper>
-              </RecruitCountSlider>
-            </RecruitCountWrapper>
-          </GeneralFilterBody>
-        </GeneralFilterItem>
+        {!isEquipment && (
+          <GeneralFilterItem key="recruit">
+            <GeneralFilterName>Recruit Count</GeneralFilterName>
+            <GeneralFilterBody>
+              <RecruitCountWrapper>
+                <RecruitCountSlider>
+                  <RecruitCountSliderLine />
+                  <RecruitCountSliderLineSelected
+                    start={conditionStart}
+                    end={conditionEnd}
+                  />
+                  <RecruitCountSliderStepWrapper>
+                    {[...Array(8)].map((item, index) => {
+                      const active =
+                        index >= conditionStart && index <= conditionEnd;
+                      return (
+                        <RecruitCountSliderStep
+                          key={index}
+                          index={index}
+                          active={active}
+                          onClick={() => handleClickSlider(index)}
+                        />
+                      );
+                    })}
+                  </RecruitCountSliderStepWrapper>
+                  <RecruitCountSliderMarkWrapper>
+                    {[...Array(8)].map((item, index) => {
+                      const active =
+                        index >= conditionStart && index <= conditionEnd;
+                      return (
+                        <RecruitCountSliderMark
+                          key={index}
+                          index={index}
+                          active={active}
+                        >
+                          {index}
+                        </RecruitCountSliderMark>
+                      );
+                    })}
+                  </RecruitCountSliderMarkWrapper>
+                </RecruitCountSlider>
+              </RecruitCountWrapper>
+            </GeneralFilterBody>
+          </GeneralFilterItem>
+        )}
         <GeneralFilterItem key="rarity">
           <GeneralFilterName>Rarity</GeneralFilterName>
           <GeneralFilterBody>
@@ -143,14 +147,16 @@ const GeneralFilter: React.FC<Props> = ({
             })}
           </GeneralFilterBody>
         </GeneralFilterItem>
-        <GeneralFilterItem key="gender">
-          <GeneralFilterName>Gender</GeneralFilterName>
-          <GeneralFilterBody>
-            {GenderParams.map((genderItem, genderIndex) => {
-              return renderCheckboxItem(genderItem, genderIndex, "gender");
-            })}
-          </GeneralFilterBody>
-        </GeneralFilterItem>
+        {!isEquipment && (
+          <GeneralFilterItem key="gender">
+            <GeneralFilterName>Gender</GeneralFilterName>
+            <GeneralFilterBody>
+              {GenderParams.map((genderItem, genderIndex) => {
+                return renderCheckboxItem(genderItem, genderIndex, "gender");
+              })}
+            </GeneralFilterBody>
+          </GeneralFilterItem>
+        )}
       </>
     );
   };

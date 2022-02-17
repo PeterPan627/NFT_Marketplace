@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import Tooltip from "rc-tooltip";
+import { useHistory, useLocation } from "react-router-dom";
+// import Tooltip from "rc-tooltip";
 import { GraphQueryUrls } from "../../../../Constants";
 import { sendRequestByGraphQl } from "../../../../utils/fetch";
 import {
+  Wrapper,
   BackButton,
   HeroCommonIntroduction,
   HeroDetailImage,
@@ -33,7 +34,7 @@ const HeroDetail: React.FC = () => {
   const [heroDetail, setHeroDetail] = useState<any>(null);
   const [introductionType, setIntroductionType] =
     useState<string>("introduction");
-  // let history = useHistory();
+  let history = useHistory();
   const location = useLocation();
   const query = new URLSearchParams(location.search);
   const tokenId = +(query.get("tokenId") || "");
@@ -50,7 +51,7 @@ const HeroDetail: React.FC = () => {
       }
     };
     fetchData();
-  }, []);
+  });
 
   const handleChangeIntroductionType = (value: string) => {
     setIntroductionType(value);
@@ -77,8 +78,8 @@ const HeroDetail: React.FC = () => {
   };
 
   return (
-    <>
-      <BackButton>
+    <Wrapper>
+      <BackButton onClick={() => history.goBack()}>
         <div>
           <i className="fa-solid fa-angle-left" />
           Back
@@ -237,7 +238,7 @@ const HeroDetail: React.FC = () => {
           </HeroDetailIntroduction>
         </HeroDetailWrapper>
       )}
-    </>
+    </Wrapper>
   );
 };
 

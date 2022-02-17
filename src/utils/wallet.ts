@@ -1,4 +1,4 @@
-const setupNetwork = async () => {
+export const setupNetwork = async () => {
   const provider = window.ethereum;
   if (provider) {
     const chainId = parseInt(process.env.REACT_APP_CHAIN_ID || "", 10);

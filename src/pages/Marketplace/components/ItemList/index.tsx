@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { SortParams } from "../../../../Constants";
+import EquipmentItem from "./EuipmentItem";
 
 import HeroItem from "./HeroItem";
 import {
@@ -28,6 +29,7 @@ export enum SortType {
 }
 
 interface Props {
+  isEquipment?: boolean;
   items: any[];
   totalItemsCount: number;
   filterCondition: any;
@@ -35,6 +37,7 @@ interface Props {
 }
 
 const ItemList: React.FC<Props> = ({
+  isEquipment = false,
   items,
   totalItemsCount,
   filterCondition,
@@ -80,7 +83,9 @@ const ItemList: React.FC<Props> = ({
   return (
     <ItemListWrapper>
       <ItemListHeader>
-        <span>{`${totalItemsCount} Heros`}</span>
+        <span>{`${totalItemsCount} ${
+          isEquipment ? "Equipments" : "Heros"
+        }`}</span>
         <div>
           <CurrencyToggle>
             <CurrencyItem
@@ -107,8 +112,12 @@ const ItemList: React.FC<Props> = ({
       </ItemListHeader>
       <ItemListBody>
         {items.length > 0 ? (
-          items.map((heroItem) => {
-            return <HeroItem key={heroItem._id} hero={heroItem} />;
+          items.map((item) => {
+            return isEquipment ? (
+              <EquipmentItem key={item.tokenId} equipment={item} />
+            ) : (
+              <HeroItem key={item._id} hero={item} />
+            );
           })
         ) : (
           <ItemNotFound>
