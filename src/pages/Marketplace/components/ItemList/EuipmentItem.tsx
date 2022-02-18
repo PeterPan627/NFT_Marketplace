@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
+import { TokenPriceContext } from "../..";
 
 import {
   Item,
@@ -16,6 +17,10 @@ interface Props {
 
 const EquipmentItem: React.FC<Props> = ({ equipment }) => {
   let history = useHistory();
+  const tokenPrice = useContext(TokenPriceContext);
+
+  const equipmentPriceSymbol: string = equipment.currency?.symbol || "";
+  const symbolPrice = tokenPrice[equipmentPriceSymbol] || {};
 
   const handleClickHeroItem = (tokenId: number) => {
     history.push(`/equipment?tokenId=${tokenId}`);
@@ -50,10 +55,11 @@ const EquipmentItem: React.FC<Props> = ({ equipment }) => {
             <div>
               <CurrencyImage coin={equipment.currency.slug} />
               {equipment.price / 10 ** equipment.currency.decimal}
-              <span>{equipment.currency.symbol}</span>
+              <span>{equipmentPriceSymbol}</span>
             </div>
             <div>{`~ $${
-              equipment.price / 10 ** equipment.currency.decimal
+              (equipment.price / 10 ** equipment.currency.decimal) *
+              (symbolPrice.price || 1)
             }`}</div>
           </div>
         </ItemDescription>

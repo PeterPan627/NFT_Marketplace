@@ -51,7 +51,7 @@ const HeroDetail: React.FC = () => {
       }
     };
     fetchData();
-  });
+  }, []);
 
   const handleChangeIntroductionType = (value: string) => {
     setIntroductionType(value);

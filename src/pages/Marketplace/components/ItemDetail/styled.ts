@@ -270,17 +270,17 @@ export const HeroIntroductionStatsItem = styled.div`
 
 export const EquipmentIntroductionStats = styled.div`
   font-weight: 700;
-    font-size: 18px;
-    margin-top: 22px;
-    &>p {
-      margin-top: 0;
-      margin-bottom: 1rem;
-    }
-    &>div {
-      background: #3c3c3c;
-      padding: 12px 20px 20px;
-      font-size: 14px;
-    }
+  font-size: 18px;
+  margin-top: 22px;
+  &>p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  &>div {
+    background: #3c3c3c;
+    padding: 12px 20px 20px;
+    font-size: 14px;
+  }
 }
 `;
 
@@ -461,4 +461,26 @@ export const HeroPropertyItemDetail = styled.div<{ color?: any }>`
     color: #c4c4c4;
     font-size: 9px;
   }
+`;
+
+export const ItemOperationButtonWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  height: 70px;
+  padding-right: 15px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+`;
+
+export const ItemPriceContainer = styled.div`
+  font-weight: 700;
+  display: flow-root;
+  margin: 1rem 0;
+`;
+
+export const ItemOperationButton = styled.div`
+  margin-left: 10px;
 `;

@@ -42,7 +42,9 @@ const EquipmentDetail: React.FC = () => {
       }
     };
     fetchData();
-  });
+  }, []);
+
+  console.log(equipmentDetail);
 
   const statsRenderOrder = ["attribute1", "attribute2"];
 
@@ -87,7 +89,11 @@ const EquipmentDetail: React.FC = () => {
               </HeroName>
             </HeroDetailImageContent>
             <HeroDetailMainImage>
-              <img src={equipmentDetail.image} alt="hero-img" />
+              <img
+                style={{ width: 250, height: 250 }}
+                src={equipmentDetail.image}
+                alt="hero-img"
+              />
             </HeroDetailMainImage>
           </HeroDetailImage>
           <HeroDetailIntroduction>
