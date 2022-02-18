@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+import ItemList from "../../../../components/ItemList";
 import { GraphQueryUrls } from "../../../../Constants";
 import {
   makeGraphQlVariables,
   sendRequestByGraphQl,
 } from "../../../../utils/fetch";
 
-import { Filter, GeneralFilter, SkillFilter, StatsFilter, ItemList } from "..";
+import { Filter, GeneralFilter, SkillFilter, StatsFilter } from "..";
 import { Wrapper, FilterWrapper, ContentsWrapper } from "./styled";
 
 const AllHeros: React.FC = () => {

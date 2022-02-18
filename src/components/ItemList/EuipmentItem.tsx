@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { TokenPriceContext } from "../../../HomePage";
+import { TokenPriceContext } from "../../pages/HomePage";
 
 import {
   Item,
@@ -23,7 +23,7 @@ const EquipmentItem: React.FC<Props> = ({ equipment }) => {
   const symbolPrice = tokenPrice[equipmentPriceSymbol] || {};
 
   const handleClickHeroItem = (tokenId: number) => {
-    history.push(`/equipment?tokenId=${tokenId}`);
+    history.push(`/marketplace/equipment?tokenId=${tokenId}`);
   };
 
   return (

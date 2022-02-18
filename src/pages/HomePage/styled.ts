@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const BannerImage = styled.div`
-  background: url("/assets/images/main/banner.png");
+export const BannerImage = styled.div<{ bannerImageUrl: string }>`
+  background: ${({ bannerImageUrl }) => `url(${bannerImageUrl})`};
   background-size: 100% 95vh;
   width: 100%;
   height: 95vh;

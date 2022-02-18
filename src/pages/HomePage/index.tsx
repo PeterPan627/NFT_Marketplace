@@ -1,7 +1,8 @@
 import React, { useState, useEffect, createContext } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Switch, Route, Redirect } from "react-router-dom";
 import { GraphQueryUrls } from "../../Constants";
 import { sendRequestByGraphQl } from "../../utils/fetch";
+import Inventory from "../Inventory";
 import Marketplace from "../Marketplace";
 
 import { BannerImage, BannerFeet, BannerFeetLabel, Contents } from "./styled";
@@ -9,10 +10,10 @@ import { BannerImage, BannerFeet, BannerFeetLabel, Contents } from "./styled";
 export const TokenPriceContext = createContext<{ [key: string]: any }>({});
 
 const TITLES: { [key: string]: string } = {
-  "/heros": "MARKETPLACE",
-  "/equipments": "MARKETPLACE",
-  "/hero": "HERO DETAIL",
-  "/equipment": "EQUIPMENT DETAIL",
+  "/marketplace/heros": "MARKETPLACE",
+  "/marketplace/equipments": "MARKETPLACE",
+  "/marketplace/hero": "HERO DETAIL",
+  "/marketplace/equipment": "EQUIPMENT DETAIL",
 };
 
 const HomePage: React.FC = () => {
@@ -39,12 +40,22 @@ const HomePage: React.FC = () => {
   return (
     <>
       <TokenPriceContext.Provider value={tokenPrice}>
-        <BannerImage />
+        <BannerImage
+          bannerImageUrl={
+            pathname.indexOf("/marketplace/equipment") > -1
+              ? "/assets/images/main/banner_equipment_marketplace.jpg"
+              : "/assets/images/main/banner.png"
+          }
+        />
         <BannerFeet>
           <BannerFeetLabel>{TITLES[pathname] || "MARKETPLACE"}</BannerFeetLabel>
         </BannerFeet>
         <Contents>
-          <Marketplace />
+          <Switch>
+            <Route exact={false} path="/marketplace" component={Marketplace} />
+            <Route exact={false} path="/inventory" component={Inventory} />
+            <Redirect to="/marketplace" />
+          </Switch>
         </Contents>
       </TokenPriceContext.Provider>
     </>

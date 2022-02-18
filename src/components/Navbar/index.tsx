@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { useHistory } from "react-router-dom";
 import { useWeb3React, UnsupportedChainIdError } from "@web3-react/core";
 import {
   NoEthereumProviderError,
@@ -40,6 +41,7 @@ import {
 
 const Navbar: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  let history = useHistory();
   const { activate, deactivate, account } = useWeb3React();
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(false);
@@ -100,8 +102,6 @@ const Navbar: React.FC = () => {
     [activate]
   );
 
-  console.log("account", account);
-
   return (
     <>
       <Container>
@@ -111,7 +111,9 @@ const Navbar: React.FC = () => {
             <MenuItem>HOME</MenuItem>
             <MenuItem>EARN</MenuItem>
             <MenuItem>PRIVATE BETA</MenuItem>
-            <MenuItem>MARKETPLACE</MenuItem>
+            <MenuItem onClick={() => history.push("/marketplace/heros")}>
+              MARKETPLACE
+            </MenuItem>
             <MenuItem>DOCUMENT</MenuItem>
             <MenuItem>CONTRACT ADDRESS</MenuItem>
           </Menu>
@@ -153,7 +155,11 @@ const Navbar: React.FC = () => {
                 </div>
               </AccountDetailBalanceWrapper>
               <AccountDetailTitle>Actions</AccountDetailTitle>
-              <AccountDetailActionButton>Inventory</AccountDetailActionButton>
+              <AccountDetailActionButton
+                onClick={() => history.push("/inventory")}
+              >
+                Inventory
+              </AccountDetailActionButton>
               <AccountDetailDivider />
               <AccountDetailActionButton>Disconnect</AccountDetailActionButton>
             </AccountDetail>

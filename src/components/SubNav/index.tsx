@@ -2,11 +2,16 @@ import React from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { ContentNavbar, ContentNavItem } from "./styled";
 
-function Navbar() {
+function SubNavbar({
+  externalLink,
+}: {
+  externalLink: { hero: string; equipment: string };
+}) {
   let history = useHistory();
   const location = useLocation();
-  const isHeroList = location.pathname.indexOf("heros") > -1;
-  const isEquipmentList = location.pathname.indexOf("equipments") > -1;
+  const isHeroList = location.pathname.indexOf(externalLink.hero) > -1;
+  const isEquipmentList =
+    location.pathname.indexOf(externalLink.equipment) > -1;
 
   const handleClickNavItem = (url: string) => {
     history.push(url);
@@ -15,13 +20,13 @@ function Navbar() {
   return isHeroList || isEquipmentList ? (
     <ContentNavbar>
       <ContentNavItem
-        onClick={() => handleClickNavItem("/heros")}
+        onClick={() => handleClickNavItem(externalLink.hero)}
         active={isHeroList}
       >
         Hero
       </ContentNavItem>
       <ContentNavItem
-        onClick={() => handleClickNavItem("/equipments")}
+        onClick={() => handleClickNavItem(externalLink.equipment)}
         active={isEquipmentList}
       >
         Equipment
@@ -30,4 +35,4 @@ function Navbar() {
   ) : null;
 }
 
-export default Navbar;
+export default SubNavbar;

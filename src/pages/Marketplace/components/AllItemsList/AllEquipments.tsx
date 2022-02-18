@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+import ItemList from "../../../../components/ItemList";
 import { GraphQueryUrls } from "../../../../Constants";
 import {
   makeGraphQlVariables,
   sendRequestByGraphQl,
 } from "../../../../utils/fetch";
 
-import { Filter, GeneralFilter, ItemList } from "..";
+import { Filter, GeneralFilter } from "..";
 import { FilterWrapper, ContentsWrapper, Wrapper } from "./styled";
 
 const AllEquipments: React.FC = () => {

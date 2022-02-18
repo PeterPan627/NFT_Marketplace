@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { SortParams } from "../../../../Constants";
+import { SortParams } from "../../Constants";
 import EquipmentItem from "./EuipmentItem";
 
 import HeroItem from "./HeroItem";
@@ -30,18 +30,22 @@ export enum SortType {
 
 interface Props {
   isEquipment?: boolean;
-  items: any[];
+  isOnlyList?: boolean;
+  notFoundString?: string;
   totalItemsCount: number;
   filterCondition: any;
   setFilterCondition: any;
+  items: any[];
 }
 
 const ItemList: React.FC<Props> = ({
   isEquipment = false,
-  items,
+  isOnlyList = false,
+  notFoundString = "Hero Not Found",
   totalItemsCount,
   filterCondition,
   setFilterCondition,
+  items,
 }) => {
   const [selectedCurrency, setSelectedCurrency] = useState<CurrencyType>(
     CurrencyType.bnb
@@ -82,34 +86,36 @@ const ItemList: React.FC<Props> = ({
 
   return (
     <ItemListWrapper>
-      <ItemListHeader>
-        <span>{`${totalItemsCount} ${
-          isEquipment ? "Equipments" : "Heros"
-        }`}</span>
-        <div>
-          <CurrencyToggle>
-            <CurrencyItem
-              onClick={() => handleClickCurrencyType(CurrencyType.bnb)}
-              active={selectedCurrency === CurrencyType.bnb}
-              image="/assets/images/currency/binance-coin.png"
-            />
-            <CurrencyItem
-              onClick={() => handleClickCurrencyType(CurrencyType.busd)}
-              active={selectedCurrency === CurrencyType.busd}
-              image="/assets/images/currency/binance-usd.png"
-            />
-          </CurrencyToggle>
-          <select onChange={handleChangeSortType} value={sortValue}>
-            {SortParams.map((param, index) => {
-              return (
-                <option key={index} value={param.value}>
-                  {param.label}
-                </option>
-              );
-            })}
-          </select>
-        </div>
-      </ItemListHeader>
+      {!isOnlyList && (
+        <ItemListHeader>
+          <span>{`${totalItemsCount} ${
+            isEquipment ? "Equipments" : "Heros"
+          }`}</span>
+          <div>
+            <CurrencyToggle>
+              <CurrencyItem
+                onClick={() => handleClickCurrencyType(CurrencyType.bnb)}
+                active={selectedCurrency === CurrencyType.bnb}
+                image="/assets/images/currency/binance-coin.png"
+              />
+              <CurrencyItem
+                onClick={() => handleClickCurrencyType(CurrencyType.busd)}
+                active={selectedCurrency === CurrencyType.busd}
+                image="/assets/images/currency/binance-usd.png"
+              />
+            </CurrencyToggle>
+            <select onChange={handleChangeSortType} value={sortValue}>
+              {SortParams.map((param, index) => {
+                return (
+                  <option key={index} value={param.value}>
+                    {param.label}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        </ItemListHeader>
+      )}
       <ItemListBody>
         {items.length > 0 ? (
           items.map((item) => {
