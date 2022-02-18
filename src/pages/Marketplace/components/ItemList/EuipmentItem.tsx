@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { TokenPriceContext } from "../..";
+import { TokenPriceContext } from "../../../HomePage";
 
 import {
   Item,

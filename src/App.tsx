@@ -6,7 +6,8 @@ import { ethers } from "ethers";
 import { ToastContainer } from "react-toastify";
 import GlobalStyle from "./styles/global";
 import Navbar from "./components/Navbar";
-import Marketplace from "./pages/Marketplace";
+import HomePage from "./pages/HomePage";
+
 import "react-toastify/dist/ReactToastify.css";
 
 const history = createBrowserHistory();
@@ -24,7 +25,7 @@ function App() {
         <div className="App">
           <GlobalStyle />
           <Navbar />
-          <Marketplace />
+          <HomePage />
           <ToastContainer
             position="top-right"
             autoClose={5000}
