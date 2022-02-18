@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 import { GraphQueryUrls } from "../../Constants";
 import { sendRequestByGraphQl } from "../../utils/fetch";
 
@@ -21,8 +21,17 @@ import {
 
 export const TokenPriceContext = createContext<{ [key: string]: any }>({});
 
+const TITLES: { [key: string]: string } = {
+  "/heros": "MARKETPLACE",
+  "/equipments": "MARKETPLACE",
+  "/hero": "HERO DETAIL",
+  "/equipment": "EQUIPMENT DETAIL",
+};
+
 const Marketplace: React.FC = () => {
   const [tokenPrice, setTokenPrice] = useState({});
+  const location = useLocation();
+  const pathname: string = location.pathname || "";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,13 +51,13 @@ const Marketplace: React.FC = () => {
 
   return (
     <>
-      <BannerImage />
-      <BannerFeet>
-        <BannerFeetLabel>MARKETPLACE</BannerFeetLabel>
-      </BannerFeet>
-      <Contents>
-        <Navbar />
-        <TokenPriceContext.Provider value={tokenPrice}>
+      <TokenPriceContext.Provider value={tokenPrice}>
+        <BannerImage />
+        <BannerFeet>
+          <BannerFeetLabel>{TITLES[pathname] || "MARKETPLACE"}</BannerFeetLabel>
+        </BannerFeet>
+        <Contents>
+          <Navbar />
           <ContentsContainer>
             <Switch>
               <Route exact strict path="/heros" component={AllHeros} />
@@ -68,8 +77,8 @@ const Marketplace: React.FC = () => {
               <Redirect to="/heros" />
             </Switch>
           </ContentsContainer>
-        </TokenPriceContext.Provider>
-      </Contents>
+        </Contents>
+      </TokenPriceContext.Provider>
     </>
   );
 };
