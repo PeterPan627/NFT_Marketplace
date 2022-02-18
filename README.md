@@ -1,46 +1,94 @@
-# Getting Started with Create React App
+# NFT based Photo MarketPlace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***
 
-## Available Scripts
+## 【Introduction of NFT based Photo MarketPlace】
+- NFT based Photo MarketPlace is the peer-to-peer Marketplace for buy and sell of photos which was uploaded by users.
+- It assume that uploaded photos in this marketplace are used as photos of news article.
+- Even if user has smartphone which include function of camera, anyone can become sellers by uploading photos in this MarketPlace.
+  - It mean that if user who is seller live in poor region and doesn't has bank account and so on, they can earn money by selling photos in this marketplace.
+- All of being uploaded photos are tokenized as NFT（Non-Fungible token). 
+- Uploaded photos buy/sell by using DAI for preventing risk of high volatility of crypto currency.
 
-In the project directory, you can run:
 
-### `npm start`
+&nbsp;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+***
 
-### `npm test`
+## 【Setup】
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Setup private network by using Ganache-CLI
+1. Download Ganache-CLI from link below  
+https://www.trufflesuite.com/ganache  
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Execute Ganache   
+```
+$ ganache-cli -d
+```
+※ `-d` option is the option in order to be able to use same address on Ganache-CLI every time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+&nbsp;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Setup wallet by using Metamask
+1. Add MetaMask to browser (Chrome or FireFox or Opera or Brave)    
+https://metamask.io/  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Adjust appropriate newwork below 
+```
+http://127.0.0.1:8545
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+&nbsp;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Setup backend
+1. Deploy contracts to private network of Ganache
+```
+(root directory)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+$ npm run migrate:local
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+&nbsp;
+
+
+### Setup frontend
+1. NPM modules install
+```
+$ cd client
+$ npm install
+```
+
+2. Execute command below in root directory.
+```
+$ cd ..
+$ npm run client
+```
+
+3. Access to browser by using link 
+```
+http://127.0.0.1:3000
+```
+
+&nbsp;
+
+***
+
+
+## 【Work flow】
+
+&nbsp;
+
+***
+
+## 【References】
+- Gitcoin（The Road to Devcon5）
+https://gitcoin.co/issue/ConsenSys/Road-To-Devcon-Relay/2
+https://gitcoin.co/issue/ConsenSys/ConsenSysGrants-Challenges/5/3497
+
+- Documents
+
