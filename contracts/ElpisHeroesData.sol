@@ -2,7 +2,7 @@ pragma solidity ^0.8.0;
 pragma experimental ABIEncoderV2;
 
 import "./elpisHeroData/ElpisHeroDataStorages.sol";
-import "./ElpisHeroes.sol";
+import "./ElpisMetaverseHeroes.sol";
 
 /**
  * @notice - This is the storage contract for elpisHeroesData
@@ -41,7 +41,6 @@ contract ElpisHeroesData is ElpisHeroDataStorages {
      */
     function updateOwnerOfELpisHero(uint256 _elpisHeroId, address _newOwner)
         public
-        returns (bool)
     {
         require(
             _newOwner != address(0),
@@ -60,7 +59,6 @@ contract ElpisHeroesData is ElpisHeroDataStorages {
      */
     function updateStatus(uint256 _elpisHeroId, string memory _newStatus)
         public
-        returns (bool)
     {
         /// Identify elpisHero's index. It is the same as tokenId
         uint256 elpisHeroIndex = _elpisHeroId;

@@ -3,7 +3,7 @@
 pragma solidity ^0.8.0;
 pragma experimental ABIEncoderV2;
 
-import "./ElpisHeroes.sol";
+import "./ElpisMetaverseHeroes.sol";
 import "./ElpisHeroesData.sol";
 import "./marketplace/ElpisHeroMarketplaceEvents.sol";
 import "./marketplace/ElpisHeroTradable.sol";
@@ -13,14 +13,16 @@ contract ElpisHeroMarketplace is ElpisHeroTradable, ElpisHeroMarketplaceEvents {
     using SafeMath for uint256;
 
     address public ELPISHERO_MARKETPLACE;
-    ElpisHeroesData public elpisHeroesData;
+    ElpisHeroesData public elpisHeroesDataContract;
+    ElpisMetaverseHeroes public elpisHeroes;
 
-    constructor(ElpisHeroesData _elpisHeroesData)
-        public
-        ElpisHeroTradable(_elpisHeroesData)
-    {
-        elpisHeroesData = _elpisHeroesData;
-        address payable ELPISHERO_MARKETPLACE = address(uint160(address(this)));
+    constructor(
+        ElpisHeroesData _elpisHeroesData,
+        ElpisMetaverseHeroes _elpisHeroes
+    ) ElpisHeroTradable(_elpisHeroesData) {
+        elpisHeroesDataContract = _elpisHeroesData;
+        elpisHeroes = _elpisHeroes;
+        ELPISHERO_MARKETPLACE = address(uint160(address(this)));
     }
 
     /**
@@ -28,12 +30,15 @@ contract ElpisHeroMarketplace is ElpisHeroTradable, ElpisHeroMarketplaceEvents {
      * @notice - msg.sender buy NFT with ETH (msg.value)
      */
 
-    function buyElpisHero(uint256 _tokenId) public payable returns (bool) {
-        ElpisHeroesData.ElpisHeroData memory elpisHeroData = ElpisHeroesData
-            .getElpiHeroData(_tokenId);
+    function buyElpisHero(uint256 _tokenId) public payable {
+        ElpisHeroesData.ElpisHeroData
+            memory elpisHeroData = elpisHeroesDataContract.getElpiHeroData(
+                _tokenId
+            );
         address _seller = elpisHeroData.ownerAddress; /// Owner
-        address payable seller = address(uint160(_seller)); /// Convert owner address with payable
-        uint256 buyAmount = elpisHeroData.tokenPrice;
+        // address payable seller = address(uint160(_seller)); /// Convert owner address with payable
+        address payable seller = payable(_seller); /// Convert owner address with payable
+        uint256 buyAmount = elpisHeroData.heroPrice;
         require(
             msg.value == buyAmount,
             "msg.value should be equal to the buyAmount"
@@ -46,19 +51,19 @@ contract ElpisHeroMarketplace is ElpisHeroTradable, ElpisHeroMarketplaceEvents {
         address buyer = msg.sender;
         // uint256 photoId = 1; /// [Note]: PhotoID is always 1. Because each photoNFT is unique.
         uint256 elpisHeroId = elpisHeroData.elpisHeroId;
-        ElpisHeroes.approve(buyer, elpisHeroId);
+        elpisHeroes.approve(buyer, elpisHeroId);
 
-        address ownerBeforeOwnershipTransferred = ElpisHeroes.ownerOf(
+        address ownerBeforeOwnershipTransferred = elpisHeroes.ownerOf(
             elpisHeroId
         );
 
         /// Transfer Ownership of the ElpisHero from a seller to a buyer
         transferOwnershipOfPhotoNFT(elpisHeroId, buyer);
-        ElpisHeroesData.updateOwnerOfELpisHero(elpisHeroId, buyer);
-        ElpisHeroesData.updateStatus(elpisHeroId, "Cancelled");
+        elpisHeroesDataContract.updateOwnerOfELpisHero(elpisHeroId, buyer);
+        elpisHeroesDataContract.updateStatus(elpisHeroId, "Cancelled");
 
         /// Event for checking result of transferring ownership of a photoNFT
-        address ownerAfterOwnershipTransferred = ElpisHeroes.ownerOf(
+        address ownerAfterOwnershipTransferred = elpisHeroes.ownerOf(
             elpisHeroId
         );
         emit ElpisHeroOwnershipChanged(

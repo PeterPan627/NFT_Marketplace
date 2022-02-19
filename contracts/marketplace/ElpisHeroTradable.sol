@@ -1,7 +1,7 @@
-pragma solidity ^0.5.16;
+pragma solidity ^0.8.0;
 pragma experimental ABIEncoderV2;
 
-import "../ElpisHeroes.sol";
+import "../ElpisMetaverseHeroes.sol";
 import "../ElpisHeroesData.sol";
 
 /**
@@ -26,7 +26,7 @@ contract ElpisHeroTradable {
 
     uint256 tradeCounter;
 
-    constructor(ElpisHeroesData _elpisHeroesData) public {
+    constructor(ElpisHeroesData _elpisHeroesData) {
         elpisHeroesData = _elpisHeroesData;
         tradeCounter = 0;
     }
