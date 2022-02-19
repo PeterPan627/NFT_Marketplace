@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import ItemList from "../../../../components/ItemList";
-import { GraphQueryUrls } from "../../../../Constants";
+import { GraphQueryUrls } from "../../../../constants";
 import {
   makeGraphQlVariables,
   sendRequestByGraphQl,

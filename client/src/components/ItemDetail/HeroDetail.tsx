@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 // import Tooltip from "rc-tooltip";
-import { GraphQueryUrls } from "../../Constants";
+import { GraphQueryUrls } from "../../constants";
 import { sendRequestByGraphQl } from "../../utils/fetch";
 import {
   Wrapper,

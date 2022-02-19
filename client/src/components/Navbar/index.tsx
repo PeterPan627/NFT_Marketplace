@@ -12,7 +12,7 @@ import {
 import { NoBscProviderError } from "@binance-chain/bsc-connector";
 import { toast } from "react-toastify";
 
-import { WalletInfos, ConnectorNames, connectorsByName } from "../../Constants";
+import { WalletInfos, ConnectorNames, connectorsByName } from "../../constants";
 import useComponentVisible from "../../hooks/useComponentVisible";
 import { setupNetwork } from "../../utils/wallet";
 

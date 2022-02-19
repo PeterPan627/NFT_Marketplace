@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { SortParams } from "../../Constants";
+import { SortParams } from "../../constants";
 import EquipmentItem from "./EuipmentItem";
 
 import HeroItem from "./HeroItem";

@@ -9,7 +9,7 @@ import {
 import ItemList from "../../components/ItemList";
 import SubNavbar from "../../components/SubNav";
 
-import { GraphQueryUrls } from "../../Constants";
+import { GraphQueryUrls } from "../../constants";
 import { makeGraphQlVariables, sendRequestByGraphQl } from "../../utils/fetch";
 
 import {

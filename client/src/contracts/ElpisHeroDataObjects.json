@@ -1,0 +1,499 @@
+{
+  "contractName": "ElpisHeroDataObjects",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.12+commit.f00d7308\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/elpisHeroData/ElpisHeroDataObjects.sol\":\"ElpisHeroDataObjects\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ElpisHeroesData.sol\":{\"keccak256\":\"0xaf9bb94f3fb690f030c8935ca073909c9a23ba7e227918b485c33bd6a87a3250\",\"urls\":[\"bzz-raw://9d78f68ed8cd2d66f29a81e8fe7342af14d84e89559b307a277aa58227cff943\",\"dweb:/ipfs/QmYdUVLMwXbQgL8vhUwK7xwSo9sScsLJsU2Syt7dws5yYt\"]},\"project:/contracts/ElpisMetaverseHeroes.sol\":{\"keccak256\":\"0xc2c623b8d9007e95265233b8fbf6118704cbd17b243a2b654e6955b01d9cf982\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://17b471ea5683b9669fc10d148cddb4f3946ef7ab7f32ac21b32e38ef3ee2ccc8\",\"dweb:/ipfs/QmfXteooU88Dhoubb6dvK6Ex8emkamgvyk6AP96fKZd1Qy\"]},\"project:/contracts/access/AccessControl.sol\":{\"keccak256\":\"0x035c57d14a5234dd88f5d05f36d3c1395795cc99eaa9f4edda8ddbb5d2d9c4d1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dd38d6a325fb3093ffd6cd4fd69f8f925494828ae925f4635f7e4307231186c0\",\"dweb:/ipfs/QmUfh9yY1sy6oe8TWwge7vH7tRHgcdRUs5rUBcoixBG8CV\"]},\"project:/contracts/access/AccessControlEnumerable.sol\":{\"keccak256\":\"0xd4d897b0ee61726db9710ec89eac31b8e8f25cd95f88db85ac146f8825780376\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fd6318eb62b19f5f6d783d68ed598c62141010e93581dc83b18292182833cc79\",\"dweb:/ipfs/QmcQQVFKS2XgN2TCfkuCAAMnD1Mz8vRpLEfWEGRzHnBTtM\"]},\"project:/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x590eb48786569d2a0f0497df47da0c0dfad11de0bcf17219a75d3da756b0c0a8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f28294246a1a5b2641a86811bf286be001a3ce4f8d2108824ade4c31dcceaf00\",\"dweb:/ipfs/QmWgM763i4d2KnjD9cK6sHsfs5nUab2akNvr1598e422j9\"]},\"project:/contracts/access/IAccessControlEnumerable.sol\":{\"keccak256\":\"0xf775df10566abf8e07c578533bdcf4258fb378cc0f1b1748829c532b797c3f42\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://caab12edeff062b576965beb735eb815d511cb1607fe3df89b6ff01da389804a\",\"dweb:/ipfs/QmaNZmqEpTWuwjkxaC4CyH86BxKnSCDZXy4X3TAKePX637\"]},\"project:/contracts/elpisHeroData/ElpisHeroDataObjects.sol\":{\"keccak256\":\"0xde8cf555a837cb0f5ea136698a139911fb9a4b3fb25d92f894d70f6af9e37edc\",\"urls\":[\"bzz-raw://63d3372b972474adda160c02665bd9613ce73e9f577c31de00675cd610e5ede1\",\"dweb:/ipfs/QmWA8HBdAdGt4fMN5fG6AyNimSjHXVuyfa4tUNz3JS2r1V\"]},\"project:/contracts/elpisHeroData/ElpisHeroDataStorages.sol\":{\"keccak256\":\"0x3c1b04baf2181e44365d2eaa500b663cdfb615f964edba40364d2457be405ae8\",\"urls\":[\"bzz-raw://d99d40073802cace9ea266cf8d959788cd41b8e0e1f7bfd29f14b93aba14e6e6\",\"dweb:/ipfs/QmTM3Yx7Hck87SkqoTZvAA7fKgKqheTKb43tiX58G4aTBf\"]},\"project:/contracts/library/ERC721.sol\":{\"keccak256\":\"0xaeb49bc9ede2dcc5d4dc32cdb2e147f8826c819853fae230b173cf3e4d1296cb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9e2a18491ae0bffd091ede1a1a1b56f8bb31df1e2dfa8e998a1c2a3405b7d0e5\",\"dweb:/ipfs/QmNm8XWgFaaV1hJ3LoaVUxynYv98DnJWDEQgdLr88mB8s4\"]},\"project:/contracts/library/ERC721Burnable.sol\":{\"keccak256\":\"0x5bc9fd0f8db2949cf2f8d87a7142b151ceef79517391a896e12af56e48492717\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a648bb57a173d9912927dca58993654296b8fd58344086904b33c5c026ea8b60\",\"dweb:/ipfs/QmbVEz5heaRBUpsASBcAYEXY4dSe5XBKWbcSrthonVgRvR\"]},\"project:/contracts/library/ERC721Enumerable.sol\":{\"keccak256\":\"0xf90b72bcb36c1b9a1cc16e950a9c174db5930dd71b81c8382dd26288cbdd17b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5691a274aa707ac63a3839d825a9bd688f4b58b8d28801a350ee5fdae1d0df14\",\"dweb:/ipfs/QmUkuvyHUwp4vtUXMyt1pXDWBxzieDp7Mz5BXhkKAxwirH\"]},\"project:/contracts/library/ERC721Pausable.sol\":{\"keccak256\":\"0x83f584d397d89555bf2b1226c54738a5aa453a1a908ff01f3e2089e866792064\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://68fcb628c1109618401e6adf29947d1f34d5aad2f9e234d008a5a6f5fe5ce3b6\",\"dweb:/ipfs/QmW2rSn4KnEu5sGiXo9w3NaR5TNrjM7RwhB1UK16NKHfDm\"]},\"project:/contracts/library/IERC721.sol\":{\"keccak256\":\"0xc4cb094a8d118c1b50d49342110a0bcda1db01e0a1065ba4bd8f6c446607cc8b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7059fd1196b09e3ecfe9bf3e4069eaef8a84d20d8c05ae248ae4e83eebfbdd4b\",\"dweb:/ipfs/QmXcXhVRX7JXzNb4dWLatEQUNqogf66mXNa23GWDJuHRdK\"]},\"project:/contracts/library/IERC721Enumerable.sol\":{\"keccak256\":\"0x2fd473da34cc9a12fb9003adfdd995227ea396fce5e32e5a1331b74c85f8fb32\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ccefd3ed239fefe9f1c32f2f65a6855146c248dbc5a06fa9c1a70aabc1f1ebf\",\"dweb:/ipfs/QmdLmhNtYzNyPYp6TPVTQa4RipJV9CabHRSmLL5uYw1B9M\"]},\"project:/contracts/library/IERC721Metadata.sol\":{\"keccak256\":\"0x0c3ee58edf8b8c487c4333710a2404b78a84230d10e1432c75998e3d8dcb9048\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c26bbf3e3e32b3ce219ebaa746a5788b38524f58b54f8665fe75c7ce9b77c230\",\"dweb:/ipfs/QmWFmd8de26oUgr6X2Zqt4b5bi7P7vwCPyVT8ECZj5tgDb\"]},\"project:/contracts/library/IERC721Receiver.sol\":{\"keccak256\":\"0xd9517254724276e2e8de3769183c1f738f445f0095c26fd9b86d3c6687e887b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0e604bcdcd5e5b2fb299ad09769cde6db19d5aa1929d1b5e939234a0f10d7eb8\",\"dweb:/ipfs/Qmd8hXE3GZfBHuWx3RNiYgFW2ci7KvHtib8DiwzJ2dgo9V\"]},\"project:/contracts/security/Pausable.sol\":{\"keccak256\":\"0xa35b1f2a670cd2a701a52c398032c9fed72df1909fe394d77ceacbf074e8937b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://72b957861691ebdaa78c52834465c4f8296480fe4f1a12ba72dc6c0c8ac076dd\",\"dweb:/ipfs/QmVz1sHCwgEivHPRDswdt9tdvky7EnWqFmbuk1wFE55VMG\"]},\"project:/contracts/utils/Address.sol\":{\"keccak256\":\"0xed90359d980ae160f092e585f61fb2f21f6ae02f46c17f695d9edf571d964bc6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c25ef7116c7e843b419602f4213aa263320adfec43e054b9225ba02874aed65b\",\"dweb:/ipfs/QmNTKMM8AR594VFvRAg7QMe15cjBxAc7g9LMGLC6KK7gYN\"]},\"project:/contracts/utils/Context.sol\":{\"keccak256\":\"0x90565a39ae45c80f0468dc96c7b20d0afc3055f344c8203a0c9258239f350b9f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://26e8b38a7ac8e7b4463af00cf7fff1bf48ae9875765bf4f7751e100124d0bc8c\",\"dweb:/ipfs/QmWcsmkVr24xmmjfnBQZoemFniXjj3vwT78Cz6uqZW1Hux\"]},\"project:/contracts/utils/Counters.sol\":{\"keccak256\":\"0x78450f4e3b722cce467b21e285f72ce5eaf361e9ba9dd2241a413926246773cd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f103065051300cd995fd4599ba91188d4071b92175b52f26110e02db091617c0\",\"dweb:/ipfs/QmSyDz67R2HCypDE8Pacn3voVwxw9x17NM66q47YgBnGqc\"]},\"project:/contracts/utils/ERC165.sol\":{\"keccak256\":\"0x93b1ce940e4e905752730be86b74d5f915097747868f7876e1de9af86afa6ad4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8a61ef44a444c0cb14d2c3c93c67290158571f4053a0867d117cfcab7ef39c07\",\"dweb:/ipfs/QmNUM5trSZ82B9XzKTyfyrQ2zEMKKr77QydXExk7TA7t4v\"]},\"project:/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0x697b5993765fba09630a06b65cb7dccc266ee86ad3768d048d86f2b85ccb0248\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://42ae0829f27b5d1a9cd476e94c178a2b7993e535c73dd8a64bfacbebbd40f5ca\",\"dweb:/ipfs/QmR7NHjGjkcbJj3maDQzaCQkommCeKhrBvAM3phgXFVTat\"]},\"project:/contracts/utils/IERC165.sol\":{\"keccak256\":\"0xfc0296945555d45d710d7a0ab5cf09b90541ebbf92685780c70a6607d10e784a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://324027b4c88ab64f9a4cb8837b794a52785c1b1c2f2875773ac5ce69cde442bf\",\"dweb:/ipfs/QmZDtbDjULZUNtq1z2RGNrBJw5WUtQzPHUFxTQxqzEq3om\"]},\"project:/contracts/utils/Strings.sol\":{\"keccak256\":\"0x2161775355b4c96f4fcb1eee551b9301814ca4ccf06fbd89d69c7f4560013bc4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://326b7d20563bdf5a8fb56568a9f829ae4b22f9427af9c48a00cb1688c59fe60a\",\"dweb:/ipfs/QmUAF3ZbGmAAPBHQQP4ioKCQPwBdPbUu19NrQBowXKgGUa\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220f123894d4d7f59c1ac869d51e6f85a89842f75d8cddf5fa2840fbb5a3518678064736f6c634300080c0033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220f123894d4d7f59c1ac869d51e6f85a89842f75d8cddf5fa2840fbb5a3518678064736f6c634300080c0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "64:293:8:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "64:293:8:-:0;;;;;",
+  "source": "pragma solidity ^0.8.0;\n\nimport \"../ElpisMetaverseHeroes.sol\";\n\ncontract ElpisHeroDataObjects {\n    struct ElpisHeroData {\n        /// [Key]: index of array\n        uint256 elpisHeroId;\n        string elpisHeroName;\n        address ownerAddress;\n        uint256 heroPrice;\n        string status; /// \"Open\" or \"Cancelled\"\n        uint256 reputation;\n    }\n}\n",
+  "sourcePath": "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\elpisHeroData\\ElpisHeroDataObjects.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/elpisHeroData/ElpisHeroDataObjects.sol",
+    "exportedSymbols": {
+      "ElpisHeroDataObjects": [
+        1234
+      ],
+      "ElpisMetaverseHeroes": [
+        573
+      ]
+    },
+    "id": 1235,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1217,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:8"
+      },
+      {
+        "absolutePath": "project:/contracts/ElpisMetaverseHeroes.sol",
+        "file": "../ElpisMetaverseHeroes.sol",
+        "id": 1218,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1235,
+        "sourceUnit": 574,
+        "src": "25:37:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ElpisHeroDataObjects",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1234,
+        "linearizedBaseContracts": [
+          1234
+        ],
+        "name": "ElpisHeroDataObjects",
+        "nameLocation": "73:20:8",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ElpisHeroDataObjects.ElpisHeroData",
+            "id": 1233,
+            "members": [
+              {
+                "constant": false,
+                "id": 1221,
+                "mutability": "mutable",
+                "name": "elpisHeroId",
+                "nameLocation": "173:11:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "165:19:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1220,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1223,
+                "mutability": "mutable",
+                "name": "elpisHeroName",
+                "nameLocation": "201:13:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "194:20:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1222,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "194:6:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1225,
+                "mutability": "mutable",
+                "name": "ownerAddress",
+                "nameLocation": "232:12:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "224:20:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1224,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "224:7:8",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1227,
+                "mutability": "mutable",
+                "name": "heroPrice",
+                "nameLocation": "262:9:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "254:17:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1226,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "254:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1229,
+                "mutability": "mutable",
+                "name": "status",
+                "nameLocation": "288:6:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "281:13:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1228,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "281:6:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1232,
+                "mutability": "mutable",
+                "name": "reputation",
+                "nameLocation": "338:10:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "330:18:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1231,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "330:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ElpisHeroData",
+            "nameLocation": "107:13:8",
+            "nodeType": "StructDefinition",
+            "scope": 1234,
+            "src": "100:255:8",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1235,
+        "src": "64:293:8",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:358:8"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/elpisHeroData/ElpisHeroDataObjects.sol",
+    "exportedSymbols": {
+      "ElpisHeroDataObjects": [
+        1234
+      ],
+      "ElpisMetaverseHeroes": [
+        573
+      ]
+    },
+    "id": 1235,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1217,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:8"
+      },
+      {
+        "absolutePath": "project:/contracts/ElpisMetaverseHeroes.sol",
+        "file": "../ElpisMetaverseHeroes.sol",
+        "id": 1218,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1235,
+        "sourceUnit": 574,
+        "src": "25:37:8",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ElpisHeroDataObjects",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1234,
+        "linearizedBaseContracts": [
+          1234
+        ],
+        "name": "ElpisHeroDataObjects",
+        "nameLocation": "73:20:8",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ElpisHeroDataObjects.ElpisHeroData",
+            "id": 1233,
+            "members": [
+              {
+                "constant": false,
+                "id": 1221,
+                "mutability": "mutable",
+                "name": "elpisHeroId",
+                "nameLocation": "173:11:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "165:19:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1220,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1223,
+                "mutability": "mutable",
+                "name": "elpisHeroName",
+                "nameLocation": "201:13:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "194:20:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1222,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "194:6:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1225,
+                "mutability": "mutable",
+                "name": "ownerAddress",
+                "nameLocation": "232:12:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "224:20:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1224,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "224:7:8",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1227,
+                "mutability": "mutable",
+                "name": "heroPrice",
+                "nameLocation": "262:9:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "254:17:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1226,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "254:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1229,
+                "mutability": "mutable",
+                "name": "status",
+                "nameLocation": "288:6:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "281:13:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1228,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "281:6:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1232,
+                "mutability": "mutable",
+                "name": "reputation",
+                "nameLocation": "338:10:8",
+                "nodeType": "VariableDeclaration",
+                "scope": 1233,
+                "src": "330:18:8",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1231,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "330:7:8",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ElpisHeroData",
+            "nameLocation": "107:13:8",
+            "nodeType": "StructDefinition",
+            "scope": 1234,
+            "src": "100:255:8",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1235,
+        "src": "64:293:8",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:358:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.12+commit.f00d7308.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-02-19T15:16:02.633Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

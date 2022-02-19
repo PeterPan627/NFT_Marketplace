@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { SkillParams } from "../../../../Constants";
+import { SkillParams } from "../../../../constants";
 import Accordion from "../Accordion";
 
 import {

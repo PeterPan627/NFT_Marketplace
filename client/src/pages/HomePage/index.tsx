@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import { useLocation, Switch, Route, Redirect } from "react-router-dom";
-import { GraphQueryUrls } from "../../Constants";
+import { GraphQueryUrls } from "../../constants";
 import { sendRequestByGraphQl } from "../../utils/fetch";
 import Inventory from "../Inventory";
 import Marketplace from "../Marketplace";
@@ -22,19 +22,19 @@ const HomePage: React.FC = () => {
   const pathname: string = location.pathname || "";
 
   useEffect(() => {
-    const fetchData = async () => {
-      const fetchedData = await sendRequestByGraphQl({
-        query: GraphQueryUrls.tokenPrice,
-        variables: {},
-      });
-      const fetchedPriceData = fetchedData.data?.tokenPrice || [];
-      let tokenPriceData: any = {};
-      fetchedPriceData.map(
-        (price: any) => (tokenPriceData[price.symbol] = price)
-      );
-      setTokenPrice(tokenPriceData);
-    };
-    fetchData();
+    // const fetchData = async () => {
+    //   const fetchedData = await sendRequestByGraphQl({
+    //     query: GraphQueryUrls.tokenPrice,
+    //     variables: {},
+    //   });
+    //   const fetchedPriceData = fetchedData.data?.tokenPrice || [];
+    //   let tokenPriceData: any = {};
+    //   fetchedPriceData.map(
+    //     (price: any) => (tokenPriceData[price.symbol] = price)
+    //   );
+    //   setTokenPrice(tokenPriceData);
+    // };
+    // fetchData();
   }, []);
 
   return (

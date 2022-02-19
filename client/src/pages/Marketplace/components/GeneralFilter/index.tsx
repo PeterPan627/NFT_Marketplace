@@ -1,6 +1,6 @@
 import React from "react";
 
-import { RacesParams, RarityParams, GenderParams } from "../../../../Constants";
+import { RacesParams, RarityParams, GenderParams } from "../../../../constants";
 import Accordion from "../Accordion";
 
 import {
