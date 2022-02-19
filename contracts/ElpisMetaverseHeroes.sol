@@ -55,15 +55,15 @@ contract ElpisMetaverseHeroes is
      * See {ERC721-tokenURI}.
      */
     constructor(
-        ElpisHeroesData _elpisHeroesData,
-        address admin // string memory baseTokenURI
+        ElpisHeroesData _elpisHeroesData // address admin // string memory baseTokenURI
     ) ERC721("Elpis Metaverse Heroes", "EMH") {
         // _baseTokenURI = baseTokenURI;
+        address caller = msg.sender;
 
-        _setupRole(DEFAULT_ADMIN_ROLE, admin);
+        _setupRole(DEFAULT_ADMIN_ROLE, caller);
 
-        _setupRole(MINTER_ROLE, admin);
-        _setupRole(PAUSER_ROLE, admin);
+        _setupRole(MINTER_ROLE, caller);
+        _setupRole(PAUSER_ROLE, caller);
 
         elpisHeroesData = _elpisHeroesData;
     }

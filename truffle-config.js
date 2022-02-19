@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');  // @notice - Should use new module.
 const mnemonic = process.env.MNEMONIC;
+const infuraKey = process.env.INFURA_KEY
 
 module.exports = {
   networks: {
@@ -23,13 +24,21 @@ module.exports = {
         skipDryRun: true,     // Skip dry run before migrations? (default: false for public nets)
 	},
 	rinkeby: {
-        provider: () => new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/" + process.env.INFURA_KEY),
+        networkCheckTimeout: 10000, 
+        provider: () => new HDWalletProvider('' + mnemonic, "https://rinkeby.infura.io/v3/" + infuraKey),
         network_id: 4,
         gas: 6000000,         // 2 times than before
         gasPrice: 5000000000, // 5 gwei,
         skipDryRun: true,     // Skip dry run before migrations? (default: false for public nets)
         //from: process.env.DEPLOYER_ADDRESS
 	},
+    // rinkeby: {
+    //     network_id: 4,
+    //     host: '127.0.0.1',
+    //     port: 8545,
+    //     gas: 4000000,
+    //     from: '0xA85974BF3e80a2D3E5AAE6b223D7EDB7A1C73488'
+    // },
 	goerli: {
         provider: () => new HDWalletProvider(mnemonic, "https://goerli.infura.io/v3/" + process.env.INFURA_KEY),
         network_id: 5,
@@ -48,6 +57,13 @@ module.exports = {
 	local: {
         host: '127.0.0.1',
         port: 8545,
+        network_id: '*',
+        skipDryRun: true,
+        gasPrice: 5000000000
+	},
+	local_ganache: {
+        host: '127.0.0.1',
+        port: 7545,
         network_id: '*',
         skipDryRun: true,
         gasPrice: 5000000000

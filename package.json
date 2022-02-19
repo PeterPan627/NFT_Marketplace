@@ -9,6 +9,7 @@
     "client": "cd client && npm run start",
     "console": "truffle console --network local",
     "migrate:local": "truffle migrate --reset --network local",
+    "migrate:local_ganache": "truffle migrate --reset --network local_ganache",
     "migrate:ropsten": "truffle migrate --reset --network ropsten"
   },
   "author": "Bikas Lin",
