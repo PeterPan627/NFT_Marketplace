@@ -9,6 +9,7 @@ import "./library/ERC721Pausable.sol";
 import "./access/AccessControlEnumerable.sol";
 import "./utils/Context.sol";
 import "./utils/Counters.sol";
+import "./ElpisHeroesData.sol";
 
 /**
  * @dev {ERC721} token, including:
@@ -34,12 +35,17 @@ contract ElpisMetaverseHeroes is
 {
     using Counters for Counters.Counter;
 
+    ElpisHeroesData private elpisHeroesData;
+
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
 
     Counters.Counter private _tokenIdTracker;
 
     string private _baseTokenURI;
+
+    // map ElpisHero's token id to its index
+    mapping(uint256 => uint256) public elpisHeroIndexes;
 
     /**
      * @dev Grants `DEFAULT_ADMIN_ROLE`, `MINTER_ROLE` and `PAUSER_ROLE` to the
@@ -84,12 +90,19 @@ contract ElpisMetaverseHeroes is
      *
      * - the caller must have the `MINTER_ROLE`.
      */
-    function mint(address to) public virtual {
+    function mint(address to, string memory _elpisHeroName) public virtual {
         require(hasRole(MINTER_ROLE, _msgSender()), "EMH: only minters");
 
         // We cannot just use balanceOf to create the new tokenId because tokens
         // can be burned (destroyed), so we need a separate counter.
         _mint(to, _tokenIdTracker.current());
+        elpisHeroesData.saveMetadataOfElpisHero(
+            _tokenIdTracker.current(),
+            _elpisHeroName,
+            to,
+            0
+        );
+        elpisHeroesData.updateStatus(_tokenIdTracker.current(), "Open");
         _tokenIdTracker.increment();
     }
 

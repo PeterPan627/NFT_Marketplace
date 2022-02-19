@@ -1,7 +1,7 @@
 {
-  "name": "NFT-based-photo-marketplace",
+  "name": "Elpis Battle Game Hero Marketplace",
   "version": "1.0.0",
-  "description": "NFT-based-photo-marketplace",
+  "description": "Elpis Battle Game Hero Marketplace",
   "main": "index.js",
   "scripts": {
     "test": "truffle test ./test/*",
@@ -11,7 +11,7 @@
     "migrate:local": "truffle migrate --reset --network local",
     "migrate:ropsten": "truffle migrate --reset --network ropsten"
   },
-  "author": "masaun",
+  "author": "Bikas Lin",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
