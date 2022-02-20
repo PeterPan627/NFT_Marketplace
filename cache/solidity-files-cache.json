@@ -1,0 +1,1315 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\access\\AccessControl.sol": {
+      "lastModificationDate": 1645201530483,
+      "contentHash": "4eed96fe47aba043ba9f23ce5ae3829e",
+      "sourceName": "contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol",
+        "../utils/Context.sol",
+        "../utils/Strings.sol",
+        "../utils/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\access\\IAccessControl.sol": {
+      "lastModificationDate": 1645201478147,
+      "contentHash": "58253824d8092803d6b389e1d09654c0",
+      "sourceName": "contracts/access/IAccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1645201231859,
+      "contentHash": "851485d5b925529b1a2f34a0be077891",
+      "sourceName": "contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1645201437186,
+      "contentHash": "3c2ffbb97546dcd93f1ac7468d2b64cb",
+      "sourceName": "contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\utils\\ERC165.sol": {
+      "lastModificationDate": 1645201548369,
+      "contentHash": "a53786f98c91342f4d5c1815b6d54868",
+      "sourceName": "contracts/utils/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\utils\\IERC165.sol": {
+      "lastModificationDate": 1645201543116,
+      "contentHash": "589ec5a381a4a21cf05ba7316179fa27",
+      "sourceName": "contracts/utils/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\access\\AccessControlEnumerable.sol": {
+      "lastModificationDate": 1645201514196,
+      "contentHash": "6f97348e26486ccc3127eeb0aaeaf3bc",
+      "sourceName": "contracts/access/AccessControlEnumerable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControlEnumerable.sol",
+        "./AccessControl.sol",
+        "../utils/EnumerableSet.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AccessControlEnumerable"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\access\\IAccessControlEnumerable.sol": {
+      "lastModificationDate": 1645201469508,
+      "contentHash": "9eb2b9ff13d97c921aae88c23bfbc1e9",
+      "sourceName": "contracts/access/IAccessControlEnumerable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccessControlEnumerable"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\utils\\EnumerableSet.sol": {
+      "lastModificationDate": 1645201484216,
+      "contentHash": "7d38f1077fb114b15d7ade33b1d64e33",
+      "sourceName": "contracts/utils/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\ElpisMetaverseHeroes.sol": {
+      "lastModificationDate": 1645370480115,
+      "contentHash": "ac8a2b9943b9bed2513bee96e9172ad2",
+      "sourceName": "contracts/ElpisMetaverseHeroes.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./library/ERC721.sol",
+        "./library/ERC721Enumerable.sol",
+        "./library/ERC721Burnable.sol",
+        "./library/ERC721Pausable.sol",
+        "./access/AccessControlEnumerable.sol",
+        "./utils/Context.sol",
+        "./utils/Counters.sol",
+        "./ElpisHeroesData.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ElpisMetaverseHeroes"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\library\\ERC721.sol": {
+      "lastModificationDate": 1645201447919,
+      "contentHash": "59aa85b81ecd5b45237d5db14737d107",
+      "sourceName": "contracts/library/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol",
+        "./IERC721Receiver.sol",
+        "./IERC721Metadata.sol",
+        "../utils/Address.sol",
+        "../utils/Context.sol",
+        "../utils/Strings.sol",
+        "../utils/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\library\\ERC721Enumerable.sol": {
+      "lastModificationDate": 1645201342936,
+      "contentHash": "902cfc8f4977698efc729d343c05b512",
+      "sourceName": "contracts/library/ERC721Enumerable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC721.sol",
+        "./IERC721Enumerable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721Enumerable"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\library\\ERC721Burnable.sol": {
+      "lastModificationDate": 1645201605611,
+      "contentHash": "43f6a0cf12911fcfd8cd9d6e27d9734b",
+      "sourceName": "contracts/library/ERC721Burnable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC721.sol",
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721Burnable"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\library\\ERC721Pausable.sol": {
+      "lastModificationDate": 1645201297593,
+      "contentHash": "924d1a3bc9dbd6970a8cad86ef5a1012",
+      "sourceName": "contracts/library/ERC721Pausable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC721.sol",
+        "../security/Pausable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721Pausable"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\utils\\Counters.sol": {
+      "lastModificationDate": 1645201235059,
+      "contentHash": "b7811964d33f23b2d45ed3ebb76a4548",
+      "sourceName": "contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\ElpisHeroesData.sol": {
+      "lastModificationDate": 1645368986260,
+      "contentHash": "2718f367b2b7cf88643c6dc2d6fc3c76",
+      "sourceName": "contracts/ElpisHeroesData.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./elpisHeroData/ElpisHeroDataStorages.sol",
+        "./ElpisMetaverseHeroes.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ElpisHeroesData"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\library\\IERC721.sol": {
+      "lastModificationDate": 1645201633835,
+      "contentHash": "a930e2032544fdb477a54a985eb75d53",
+      "sourceName": "contracts/library/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\library\\IERC721Receiver.sol": {
+      "lastModificationDate": 1645201746498,
+      "contentHash": "9a367cecca6fed80a3e975b7e6b3bd5c",
+      "sourceName": "contracts/library/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\library\\IERC721Metadata.sol": {
+      "lastModificationDate": 1645201647993,
+      "contentHash": "4d47eb75f2404f010c1b2c0ef5a71e74",
+      "sourceName": "contracts/library/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1645201391943,
+      "contentHash": "e509dcb3fc6d9fc0fecf0626ff983344",
+      "sourceName": "contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\library\\IERC721Enumerable.sol": {
+      "lastModificationDate": 1645201641105,
+      "contentHash": "e693889474b17e8b5a1317b193db89e5",
+      "sourceName": "contracts/library/IERC721Enumerable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Enumerable"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\security\\Pausable.sol": {
+      "lastModificationDate": 1645278794074,
+      "contentHash": "662437c05ba6f3706097c8d5ca68a52a",
+      "sourceName": "contracts/security/Pausable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Pausable"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\elpisHeroData\\ElpisHeroDataStorages.sol": {
+      "lastModificationDate": 1645238935275,
+      "contentHash": "324fff12666bf8f2f5195053fc9bf37a",
+      "sourceName": "contracts/elpisHeroData/ElpisHeroDataStorages.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ElpisHeroDataObjects.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ElpisHeroDataStorages"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\elpisHeroData\\ElpisHeroDataObjects.sol": {
+      "lastModificationDate": 1645268065396,
+      "contentHash": "39640fecc01b4929629e3375d066b8df",
+      "sourceName": "contracts/elpisHeroData/ElpisHeroDataObjects.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ElpisMetaverseHeroes.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ElpisHeroDataObjects"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\marketplace\\ElpisHeroTradable.sol": {
+      "lastModificationDate": 1645369770295,
+      "contentHash": "10b4138f6d28e49d50528cf72fb4d979",
+      "sourceName": "contracts/marketplace/ElpisHeroTradable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ElpisMetaverseHeroes.sol",
+        "../ElpisHeroesData.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ElpisHeroTradable"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\ElpisHeroMarketplace.sol": {
+      "lastModificationDate": 1645371181301,
+      "contentHash": "51fd1d6e776e3e996bbfdd2fff38d703",
+      "sourceName": "contracts/ElpisHeroMarketplace.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ElpisMetaverseHeroes.sol",
+        "./ElpisHeroesData.sol",
+        "./marketplace/ElpisHeroMarketplaceEvents.sol",
+        "./marketplace/ElpisHeroTradable.sol",
+        "./utils/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ElpisHeroMarketplace"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\marketplace\\ElpisHeroMarketplaceEvents.sol": {
+      "lastModificationDate": 1645233155755,
+      "contentHash": "42a261511826c1899d7d19176e3f9d93",
+      "sourceName": "contracts/marketplace/ElpisHeroMarketplaceEvents.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ElpisHeroMarketplaceEvents"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\utils\\math\\SafeMath.sol": {
+      "lastModificationDate": 1645278815874,
+      "contentHash": "ae781719c95f0525db8761ff87ed9a29",
+      "sourceName": "contracts/utils/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\Migrations.sol": {
+      "lastModificationDate": 1645291057670,
+      "contentHash": "2a0995a0be9f2de61da21ed3ba1aa5c3",
+      "sourceName": "contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Migrations"
+      ]
+    }
+  }
+}

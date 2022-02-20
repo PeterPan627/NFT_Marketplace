@@ -1,0 +1,36 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ElpisHeroMarketplaceEvents",
+  "sourceName": "contracts/marketplace/ElpisHeroMarketplaceEvents.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "ownerBeforeOwnershipTransferred",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "ownerAfterOwnershipTransferred",
+          "type": "address"
+        }
+      ],
+      "name": "ElpisHeroOwnershipChanged",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50601680601d6000396000f3fe6080604052600080fdfea164736f6c6343000804000a",
+  "deployedBytecode": "0x6080604052600080fdfea164736f6c6343000804000a",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -66,13 +66,6 @@ contract ElpisMetaverseHeroes is
         _setupRole(PAUSER_ROLE, caller);
 
         elpisHeroesData = _elpisHeroesData;
-
-        // initially mint 5 heroes to deployedContract
-        mint(caller, "Tigress");
-        mint(caller, "Mantis");
-        mint(caller, "Viber");
-        mint(caller, "Crane");
-        mint(caller, "Monkey");
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
@@ -112,7 +105,7 @@ contract ElpisMetaverseHeroes is
             to,
             0
         );
-        elpisHeroesData.updateStatus(_tokenIdTracker.current(), "Open");
+        // elpisHeroesData.updateStatus(_tokenIdTracker.current(), "Open");
         _tokenIdTracker.increment();
     }
 

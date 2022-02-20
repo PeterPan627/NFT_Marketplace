@@ -95,7 +95,7 @@ contract ElpisHeroTradable {
     /**
      * @dev Executes a trade. Must have approved this contract to transfer the amount of currency specified to the seller. Transfers ownership of the elpisHero to the filler.
      */
-    function transferOwnershipOfPhotoNFT(uint256 _tokenId, address _buyer)
+    function transferOwnershipOfElpisHero(uint256 _tokenId, address _buyer)
         public
     {
         // Trade memory trade = getTrade(_tokenId);

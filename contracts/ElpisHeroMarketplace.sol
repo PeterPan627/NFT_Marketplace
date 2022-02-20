@@ -32,9 +32,14 @@ contract ElpisHeroMarketplace is ElpisHeroTradable, ElpisHeroMarketplaceEvents {
 
     function buyElpisHero(uint256 _tokenId) public payable {
         ElpisHeroesData.ElpisHeroData
-            memory elpisHeroData = elpisHeroesDataContract.getElpiHeroData(
+            memory elpisHeroData = elpisHeroesDataContract.getElpisHeroData(
                 _tokenId
             );
+        require(
+            keccak256(abi.encodePacked(elpisHeroData.status)) ==
+                keccak256("Open"),
+            "ElpisHero isn't Open"
+        );
         address _seller = elpisHeroData.ownerAddress; /// Owner
         // address payable seller = address(uint160(_seller)); /// Convert owner address with payable
         address payable seller = payable(_seller); /// Convert owner address with payable
@@ -51,16 +56,17 @@ contract ElpisHeroMarketplace is ElpisHeroTradable, ElpisHeroMarketplaceEvents {
         address buyer = msg.sender;
         // uint256 photoId = 1; /// [Note]: PhotoID is always 1. Because each photoNFT is unique.
         uint256 elpisHeroId = elpisHeroData.elpisHeroId;
-        elpisHeroes.approve(buyer, elpisHeroId);
+        // elpisHeroes.approve(buyer, elpisHeroId);
 
         address ownerBeforeOwnershipTransferred = elpisHeroes.ownerOf(
             elpisHeroId
         );
 
         /// Transfer Ownership of the ElpisHero from a seller to a buyer
-        transferOwnershipOfPhotoNFT(elpisHeroId, buyer);
+        // transferOwnershipOfElpisHero(elpisHeroId, buyer);
         elpisHeroesDataContract.updateOwnerOfELpisHero(elpisHeroId, buyer);
         elpisHeroesDataContract.updateStatus(elpisHeroId, "Cancelled");
+        elpisHeroes.transferFrom(seller, buyer, elpisHeroId);
 
         /// Event for checking result of transferring ownership of a photoNFT
         address ownerAfterOwnershipTransferred = elpisHeroes.ownerOf(
