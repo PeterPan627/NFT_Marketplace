@@ -402,8 +402,8 @@
       ]
     },
     "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\ElpisMetaverseHeroes.sol": {
-      "lastModificationDate": 1645370480115,
-      "contentHash": "ac8a2b9943b9bed2513bee96e9172ad2",
+      "lastModificationDate": 1645375233447,
+      "contentHash": "1302ff4a4194d0bca5bf51c99a8f42a1",
       "sourceName": "contracts/ElpisMetaverseHeroes.sol",
       "solcConfig": {
         "version": "0.8.4",

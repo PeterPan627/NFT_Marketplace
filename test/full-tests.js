@@ -46,11 +46,11 @@ describe("Test Start", function () {
         ElpisHeroesDataContract.setElpisHeroContract(ElpisHeroesContract.address);
 
         // initially mint 5 heroes to deployedContract
-        await ElpisHeroesContract.mint(contractOwner.address, "Tigress");
-        await ElpisHeroesContract.mint(contractOwner.address, "Mantis");
-        await ElpisHeroesContract.mint(contractOwner.address, "Viper");
-        await ElpisHeroesContract.mint(contractOwner.address, "Crane");
-        await ElpisHeroesContract.mint(contractOwner.address, "Monkey");
+        // await ElpisHeroesContract.mint(contractOwner.address, "Tigress");
+        // await ElpisHeroesContract.mint(contractOwner.address, "Mantis");
+        // await ElpisHeroesContract.mint(contractOwner.address, "Viper");
+        // await ElpisHeroesContract.mint(contractOwner.address, "Crane");
+        // await ElpisHeroesContract.mint(contractOwner.address, "Monkey");
 
         ElpisHeroesMarketplaceContract = await ElpisHeroesMarketplace.deploy(ElpisHeroesDataContract.address, ElpisHeroesContract.address);
 		await ElpisHeroesMarketplaceContract.deployed();
@@ -99,15 +99,15 @@ describe("Test Start", function () {
         it("User1 buys ElpisHero#1", async function() {
             let balance = await ethers.provider.getBalance(user1.address);
             let balanceOfUser1 = await ElpisHeroesContract.balanceOf(user1.address);
-            console.log('ether balance before buying', balance / 10 ** 18);
-            console.log('balance before buying', balanceOfUser1)
+            // console.log('ether balance before buying', balance / 10 ** 18);
+            // console.log('balance before buying', balanceOfUser1)
 
             await ElpisHeroesMarketplaceContract.connect(user1).buyElpisHero(1, {value: 20});
             balanceOfUser1 = await ElpisHeroesContract.balanceOf(user1.address);
 
             balance = await ethers.provider.getBalance(user1.address);
-            console.log('ether balance after buying', balance / 10 ** 18);
-            console.log('balance after buying', balanceOfUser1)
+            // console.log('ether balance after buying', balance / 10 ** 18);
+            // console.log('balance after buying', balanceOfUser1)
         })
     });
     describe("Get Account Inventory", async function() {

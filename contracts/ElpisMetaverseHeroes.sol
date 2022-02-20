@@ -66,6 +66,12 @@ contract ElpisMetaverseHeroes is
         _setupRole(PAUSER_ROLE, caller);
 
         elpisHeroesData = _elpisHeroesData;
+
+        mint(caller, "Tigress");
+        mint(caller, "Mantis");
+        mint(caller, "Viper");
+        mint(caller, "Crane");
+        mint(caller, "Monkey");
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
