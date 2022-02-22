@@ -70,7 +70,7 @@ const ElpisHeroDataStructure = [
   {
     key: "heroPrice",
     convert: (value: BigNumber) =>
-      value.div(BigNumber.from("" + 10 ** 18)).toNumber() * 10 ** 18,
+      value.div(BigNumber.from("" + 10 ** 10)).toNumber() * 10 ** 10,
   },
   { key: "status" },
   { key: "reputation", convert: (value: BigNumber) => value.toNumber() },
@@ -130,11 +130,7 @@ export const fetchHeroDataByHeroId = async (heroId: number) => {
   return result;
 };
 
-export const orderHero = async (
-  heroId: number,
-  signer: any,
-  account: string
-) => {
+export const orderHero = async (heroId: number, signer: any) => {
   console.log("start order hero");
   const elpisHeroesDataContract = getContract(
     ContractType.ElpisHeroesData,
@@ -160,11 +156,7 @@ export const orderHero = async (
   }
 };
 
-export const cancelOrderHero = async (
-  heroId: number,
-  signer: any,
-  account: string
-) => {
+export const cancelOrderHero = async (heroId: number, signer: any) => {
   console.log("start cancel order hero");
   const elpisHeroesContract = getContract(ContractType.ElpisHeroes, signer);
   const tx1 = await elpisHeroesContract.connect(signer).revokeApprove(heroId);
@@ -184,12 +176,12 @@ export const cancelOrderHero = async (
 export const editHeroPrice = async (
   heroId: number,
   price: number,
-  signer: any,
-  account: string
+  signer: any
 ) => {
   if (price < 0) return;
-  console.log("start editing hero price");
+  console.log("start editing hero price", price);
   const priceInBigNumber = BigNumber.from("" + price * 10 ** 18);
+  console.log("price in big number", priceInBigNumber);
   // console.log("signer=", signer);
   const elpisHeroesDataContract = getContract(
     ContractType.ElpisHeroesData,

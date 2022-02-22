@@ -37,7 +37,7 @@ const ItemOperationButton: React.FC<{ hero: any; fetchHeroDetail: any }> = ({
   const orderElpisHero = async (heroId: number) => {
     if (isLoading || !account) return;
     setIsLoading(true);
-    await orderHero(heroId, signer, account);
+    await orderHero(heroId, signer);
     await fetchHeroDetail(heroId);
     setIsLoading(false);
   };
@@ -46,7 +46,7 @@ const ItemOperationButton: React.FC<{ hero: any; fetchHeroDetail: any }> = ({
     if (isLoading || !account) return;
     setIsLoading(true);
     try {
-      await cancelOrderHero(heroId, signer, account);
+      await cancelOrderHero(heroId, signer);
       await fetchHeroDetail(heroId);
       setIsLoading(false);
     } catch {
@@ -65,7 +65,7 @@ const ItemOperationButton: React.FC<{ hero: any; fetchHeroDetail: any }> = ({
     }
     try {
       setIsLoading(true);
-      await editHeroPrice(heroId, price, signer, account);
+      await editHeroPrice(heroId, price, signer);
       await fetchHeroDetail(heroId);
       setIsLoading(false);
     } catch {
