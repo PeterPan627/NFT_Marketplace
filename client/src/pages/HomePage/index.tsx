@@ -22,19 +22,19 @@ const HomePage: React.FC = () => {
   const pathname: string = location.pathname || "";
 
   useEffect(() => {
-    // const fetchData = async () => {
-    //   const fetchedData = await sendRequestByGraphQl({
-    //     query: GraphQueryUrls.tokenPrice,
-    //     variables: {},
-    //   });
-    //   const fetchedPriceData = fetchedData.data?.tokenPrice || [];
-    //   let tokenPriceData: any = {};
-    //   fetchedPriceData.map(
-    //     (price: any) => (tokenPriceData[price.symbol] = price)
-    //   );
-    //   setTokenPrice(tokenPriceData);
-    // };
-    // fetchData();
+    const fetchData = async () => {
+      const fetchedData = await sendRequestByGraphQl({
+        query: GraphQueryUrls.tokenPrice,
+        variables: {},
+      });
+      const fetchedPriceData = fetchedData.data?.tokenPrice || [];
+      let tokenPriceData: any = {};
+      fetchedPriceData.map(
+        (price: any) => (tokenPriceData[price.symbol] = price)
+      );
+      setTokenPrice(tokenPriceData);
+    };
+    fetchData();
   }, []);
 
   return (

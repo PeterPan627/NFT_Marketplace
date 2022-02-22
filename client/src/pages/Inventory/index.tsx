@@ -6,6 +6,7 @@ import {
   useHistory,
   useLocation,
 } from "react-router-dom";
+import { useWeb3React } from "@web3-react/core";
 import ItemList from "../../components/ItemList";
 import SubNavbar from "../../components/SubNav";
 
@@ -25,6 +26,7 @@ import {
   InventoryNavigationTitle,
   InventoryWrapper,
 } from "./styled";
+import { fetchMyHeroes } from "../../utils/wallet";
 
 const INVENTORY_NAVIGATION = [
   {
@@ -51,16 +53,36 @@ const INVENTORY_NAVIGATION = [
 ];
 
 const Inventory: React.FC = () => {
+  const [items, setItems] = useState<{ [key: string]: any }>({});
   const [baseUrl, setBaseUrl] = useState(INVENTORY_NAVIGATION[0].baseLink);
   const [filterCondition, setFilterCondition] = useState<any>({
     recruitCounter: { start: 0, end: 7 },
     pagination: { page: 1, size: 20, total: 1 },
   });
+  const { account } = useWeb3React();
   const history = useHistory();
   const location = useLocation();
   const pathname = location.pathname;
+
+  const fetchInventoryInfo = async (account: any) => {
+    if (!account) {
+      setItems({});
+      return;
+    }
+    const myHeroes = await fetchMyHeroes(account);
+
+    let marketplaceInfo: any = [];
+    myHeroes.map(
+      (item) => item.status === "Open" && marketplaceInfo.push(item)
+    );
+    setItems({
+      "/inventory/mynfts/hero": myHeroes || [],
+      "/inventory/marketplace/hero": marketplaceInfo,
+    });
+  };
+
   useEffect(() => {
-    console.log(location.pathname);
+    fetchInventoryInfo(account);
     // const fetchData = async () => {
     //   const fetchedData = await sendRequestByGraphQl({
     //     query: GraphQueryUrls.heroListByOwner,
@@ -69,7 +91,7 @@ const Inventory: React.FC = () => {
     //   console.log(fetchedData);
     // };
     // fetchData();
-  }, [location, filterCondition]);
+  }, [account]);
 
   return (
     <InventoryWrapper>
@@ -124,7 +146,7 @@ const Inventory: React.FC = () => {
             totalItemsCount={0}
             filterCondition={filterCondition}
             setFilterCondition={setFilterCondition}
-            items={[]}
+            items={items[pathname] || []}
           />
         </InventoryContentContainer>
       </InventoryContent>

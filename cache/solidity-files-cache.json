@@ -402,8 +402,8 @@
       ]
     },
     "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\ElpisMetaverseHeroes.sol": {
-      "lastModificationDate": 1645375233447,
-      "contentHash": "1302ff4a4194d0bca5bf51c99a8f42a1",
+      "lastModificationDate": 1645490876220,
+      "contentHash": "afe565424bfc589131da32f8e7dd8318",
       "sourceName": "contracts/ElpisMetaverseHeroes.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -686,8 +686,8 @@
       ]
     },
     "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\ElpisHeroesData.sol": {
-      "lastModificationDate": 1645368986260,
-      "contentHash": "2718f367b2b7cf88643c6dc2d6fc3c76",
+      "lastModificationDate": 1645490733579,
+      "contentHash": "bb363e2b9425cb10154594d31d0f380b",
       "sourceName": "contracts/ElpisHeroesData.sol",
       "solcConfig": {
         "version": "0.8.4",

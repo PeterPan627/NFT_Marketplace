@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 // import Tooltip from "rc-tooltip";
-import { GraphQueryUrls } from "../../constants";
-import { sendRequestByGraphQl } from "../../utils/fetch";
+// import { GraphQueryUrls } from "../../constants";
+// import { sendRequestByGraphQl } from "../../utils/fetch";
+import { fetchHeroDataByHeroId } from "../../utils/wallet";
+import ItemOperationButton from "./ItemOperationButton";
 import {
   Wrapper,
   BackButton,
@@ -36,22 +38,36 @@ const HeroDetail: React.FC = () => {
     useState<string>("introduction");
   let history = useHistory();
   const location = useLocation();
-  const query = new URLSearchParams(location.search);
-  const tokenId = +(query.get("tokenId") || "");
+
+  const fetchHeroDetail = async (tokenId: number) => {
+    const elpisHeroDetail = await fetchHeroDataByHeroId(tokenId);
+    console.log(elpisHeroDetail);
+    setHeroDetail({
+      ...elpisHeroDetail,
+      normalSkill: true,
+      passiveOneSkill: true,
+      passiveTwoSkill: true,
+      ultimateOneSkill: true,
+      ultimateTwoSkill: true,
+    });
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      const fetchedData = await sendRequestByGraphQl({
-        query: GraphQueryUrls.heroDetail,
-        variables: { tokenId },
-      });
-      const fetchedHeroDetail = fetchedData?.data?.userHeroDetail || null;
-      if (fetchedHeroDetail) {
-        setHeroDetail(fetchedHeroDetail);
-      }
-    };
-    fetchData();
-  }, []);
+    const query = new URLSearchParams(location.search);
+    const tokenId = +(query.get("tokenId") || "");
+    fetchHeroDetail(tokenId);
+    // const fetchData = async () => {
+    //   const fetchedData = await sendRequestByGraphQl({
+    //     query: GraphQueryUrls.heroDetail,
+    //     variables: { tokenId },
+    //   });
+    //   const fetchedHeroDetail = fetchedData?.data?.userHeroDetail || null;
+    //   if (fetchedHeroDetail) {
+    //     setHeroDetail(fetchedHeroDetail);
+    //   }
+    // };
+    // fetchData();
+  }, [location]);
 
   const handleChangeIntroductionType = (value: string) => {
     setIntroductionType(value);
@@ -90,20 +106,31 @@ const HeroDetail: React.FC = () => {
           <HeroDetailImage backImage="/assets/images/inventory/mapmini_angle.png">
             <HeroDetailImageContent>
               <HeroDetailRace>
-                <div>{heroDetail.rarity.replace("_", " ")}</div>
+                {/* <div>{heroDetail.rarity.replace("_", " ")}</div> */}
+                <div>Common</div>
                 <div>Genesis</div>
               </HeroDetailRace>
               <HeroName>
                 <img
-                  src={`/assets/images/igo/race-${heroDetail.heroRace.toLowerCase()}.png`}
+                  // src={`/assets/images/igo/race-${heroDetail.heroRace.toLowerCase()}.png`}
+                  src="/assets/images/igo/race-human.png"
                   alt="hero-type-img"
                 />
-                <span>{heroDetail.name}</span>
+                {/* <span>{heroDetail.name}</span> */}
+                <span>{heroDetail.elpisHeroName}</span>
               </HeroName>
             </HeroDetailImageContent>
             <HeroDetailMainImage>
-              <img src={heroDetail.image} alt="hero-img" />
+              {/* <img src={heroDetail.image} alt="hero-img" /> */}
+              <img
+                src={`/assets/images/heroes/${heroDetail.elpisHeroName.toLowerCase()}.png`}
+                alt="hero-main"
+              />
             </HeroDetailMainImage>
+            <ItemOperationButton
+              hero={heroDetail}
+              fetchHeroDetail={fetchHeroDetail}
+            />
           </HeroDetailImage>
           <HeroDetailIntroduction>
             <div>
@@ -117,11 +144,12 @@ const HeroDetail: React.FC = () => {
                       </HeroIntroductionName>
                       <HeroIntroductionRecruitCount>
                         <span>Recruit Count:</span>
-                        <span>{`${heroDetail.recruitedCount}/7`}</span>
+                        <span>{`${heroDetail.recruitedCount || 0}/7`}</span>
                       </HeroIntroductionRecruitCount>
                       <HeroIntroductionOwner>
                         <span>Owner</span>
-                        <span>{heroDetail.owner.address}</span>
+                        {/* <span>{heroDetail.owner.address}</span> */}
+                        <span>{heroDetail.ownerAddress}</span>
                       </HeroIntroductionOwner>
                       <HeroIntroductionStats>
                         <p>Stats</p>
@@ -135,7 +163,8 @@ const HeroDetail: React.FC = () => {
                                       src={`/assets/images/stats/icon_${item}.png`}
                                       alt=""
                                     />
-                                    <p>{heroDetail[item]}</p>
+                                    {/* <p>{heroDetail[item]}</p> */}
+                                    <p>100</p>
                                   </div>
                                 </div>
                               </HeroIntroductionStatsItem>
@@ -168,7 +197,7 @@ const HeroDetail: React.FC = () => {
                   <HeroIntroductionProperties>
                     <h2>Properties</h2>
                     <div>
-                      {heroDetail.bodyParts.map(
+                      {heroDetail.bodyParts?.map(
                         (bodyPart: any, index: number) => {
                           const bodyPartElement: string =
                             bodyPart.element?.toLowerCase() || "";

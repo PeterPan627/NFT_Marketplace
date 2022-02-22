@@ -91,7 +91,7 @@ contract ElpisHeroesData is ElpisHeroDataStorages {
      */
     function updateStatus(uint256 _elpisHeroId, string memory _newStatus)
         public
-        isApproved(_elpisHeroId)
+    isApproved(_elpisHeroId)
     {
         /// Identify elpisHero's index. It is the same as tokenId
         uint256 elpisHeroIndex = _elpisHeroId;
@@ -106,7 +106,7 @@ contract ElpisHeroesData is ElpisHeroDataStorages {
      */
     function updatePrice(uint256 _elpisHeroId, uint256 _newPrice)
         public
-        isApproved(_elpisHeroId)
+    isApproved(_elpisHeroId)
     {
         require(_newPrice > 0, "Price should be greater than zero");
 

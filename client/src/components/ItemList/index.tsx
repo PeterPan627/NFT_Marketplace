@@ -122,7 +122,7 @@ const ItemList: React.FC<Props> = ({
             return isEquipment ? (
               <EquipmentItem key={item.tokenId} equipment={item} />
             ) : (
-              <HeroItem key={item._id} hero={item} />
+              <HeroItem key={item.elpisHeroId} hero={item} />
             );
           })
         ) : (

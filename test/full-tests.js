@@ -81,7 +81,7 @@ describe("Test Start", function () {
         it("The price of Hero#1 should be 20", async function() {
             let ElpisHero1Data = await ElpisHeroesDataContract.getElpisHeroData(1);
             expect(ElpisHero1Data.heroPrice).to.equal(0);
-            ElpisHeroesDataContract.updatePrice(1, 20);
+            await ElpisHeroesDataContract.connect(contractOwner).updatePrice(1, 20);
             ElpisHero1Data = await ElpisHeroesDataContract.getElpisHeroData(1);
             expect(ElpisHero1Data.heroPrice).to.equal(20);
         });

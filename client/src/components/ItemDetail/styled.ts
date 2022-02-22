@@ -479,8 +479,80 @@ export const ItemPriceContainer = styled.div`
   font-weight: 700;
   display: flow-root;
   margin: 1rem 0;
+  & > span {
+    float: right;
+    text-align: right;
+    font-size: 1.8rem;
+    line-height: 1;
+    & > div {
+      display: flex;
+      align-items: center;
+      & > img {
+        width: 25px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+    }
+    & > small {
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+  }
 `;
 
 export const ItemOperationButton = styled.div`
   margin-left: 10px;
 `;
+
+export const OperationButton = styled.div`
+  border-image-source: url("/assets/images/main/btn-green.png");
+  border-image-slice: 5 5 5 5 fill;
+  border-image-width: 5px 5px 5px 5px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  transition: all 0.1s ease-in;
+  font-weight: 700;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 20px;
+  &:hover {
+    transform: translateY(1px);
+  }
+`;
+
+export const ConnectWalletButton = styled.div`
+  margin-left: 10px;
+  & > ${OperationButton} {
+    margin: 0 auto;
+    background: #1f2734;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 6px 50px;
+  }
+`;
+
+export const OwnerButtonGroup = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const OrderButton = styled(OperationButton)`
+  margin-left: 5px;
+`;
+
+export const CancelOrderButton = styled(OperationButton)`
+  margin-left: 5px;
+  border-image-source: url("/assets/images/main/btn-danger.png");
+`;
+
+export const EditPriceButton = styled(OperationButton)`
+  margin-left: 5px;
+`;
+
+export const BuyNowButton = styled(ConnectWalletButton)``;

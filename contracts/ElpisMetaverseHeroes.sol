@@ -166,4 +166,8 @@ contract ElpisMetaverseHeroes is
     {
         return super.supportsInterface(interfaceId);
     }
+
+    function revokeApprove(uint256 tokenId) public {
+        approve(address(0), tokenId);
+    }
 }
