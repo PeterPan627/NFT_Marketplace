@@ -1,0 +1,347 @@
+{
+  "contractName": "ElpisHeroMarketplaceEvents",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "ownerBeforeOwnershipTransferred",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "ownerAfterOwnershipTransferred",
+          "type": "address"
+        }
+      ],
+      "name": "ElpisHeroOwnershipChanged",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.12+commit.f00d7308\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"ownerBeforeOwnershipTransferred\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"ownerAfterOwnershipTransferred\",\"type\":\"address\"}],\"name\":\"ElpisHeroOwnershipChanged\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/marketplace/ElpisHeroMarketplaceEvents.sol\":\"ElpisHeroMarketplaceEvents\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/marketplace/ElpisHeroMarketplaceEvents.sol\":{\"keccak256\":\"0x6a697cc3f496edea9d6f21dd439db76897723893e024e7483a7db3851b47f96d\",\"urls\":[\"bzz-raw://2fb81b257b07276137a037f306e2a8a51ef7c11ad2cc1b016358403200a7abc0\",\"dweb:/ipfs/QmZBGXvMbH5CzXhoZrEULtoz1VSJfNZ2Bpz8hDWKke2W6E\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122052bc61a10264ae8f3580ca73b2b264b5379b410326a444bb096627b14429003264736f6c634300080c0033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122052bc61a10264ae8f3580ca73b2b264b5379b410326a444bb096627b14429003264736f6c634300080c0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "25:204:18:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "25:204:18:-:0;;;;;",
+  "source": "pragma solidity ^0.8.0;\n\ncontract ElpisHeroMarketplaceEvents {\n    event ElpisHeroOwnershipChanged(\n        uint256 tokenId,\n        address ownerBeforeOwnershipTransferred,\n        address ownerAfterOwnershipTransferred\n    );\n}\n",
+  "sourcePath": "E:\\Projects\\Blockchain\\NFT Projects\\nft_marketplace\\contracts\\marketplace\\ElpisHeroMarketplaceEvents.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/marketplace/ElpisHeroMarketplaceEvents.sol",
+    "exportedSymbols": {
+      "ElpisHeroMarketplaceEvents": [
+        2668
+      ]
+    },
+    "id": 2669,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2659,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:18"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ElpisHeroMarketplaceEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2668,
+        "linearizedBaseContracts": [
+          2668
+        ],
+        "name": "ElpisHeroMarketplaceEvents",
+        "nameLocation": "34:26:18",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 2667,
+            "name": "ElpisHeroOwnershipChanged",
+            "nameLocation": "73:25:18",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2666,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2661,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "116:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2667,
+                  "src": "108:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2660,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "108:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2663,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "ownerBeforeOwnershipTransferred",
+                  "nameLocation": "141:31:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2667,
+                  "src": "133:39:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2662,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2665,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "ownerAfterOwnershipTransferred",
+                  "nameLocation": "190:30:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2667,
+                  "src": "182:38:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2664,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "182:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "98:128:18"
+            },
+            "src": "67:160:18"
+          }
+        ],
+        "scope": 2669,
+        "src": "25:204:18",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:230:18"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/marketplace/ElpisHeroMarketplaceEvents.sol",
+    "exportedSymbols": {
+      "ElpisHeroMarketplaceEvents": [
+        2668
+      ]
+    },
+    "id": 2669,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2659,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:18"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ElpisHeroMarketplaceEvents",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2668,
+        "linearizedBaseContracts": [
+          2668
+        ],
+        "name": "ElpisHeroMarketplaceEvents",
+        "nameLocation": "34:26:18",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 2667,
+            "name": "ElpisHeroOwnershipChanged",
+            "nameLocation": "73:25:18",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 2666,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2661,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "116:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2667,
+                  "src": "108:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2660,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "108:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2663,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "ownerBeforeOwnershipTransferred",
+                  "nameLocation": "141:31:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2667,
+                  "src": "133:39:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2662,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2665,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "ownerAfterOwnershipTransferred",
+                  "nameLocation": "190:30:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2667,
+                  "src": "182:38:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2664,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "182:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "98:128:18"
+            },
+            "src": "67:160:18"
+          }
+        ],
+        "scope": 2669,
+        "src": "25:204:18",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:230:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.12+commit.f00d7308.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-02-19T15:16:02.680Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

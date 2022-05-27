@@ -1,116 +1,94 @@
-﻿<p align="center">
-  <img src="https://cdn.rawgit.com/alexdevero/react-typescript-styled-components-boilerplate/master/docs/react-typescript-webpack-boilerplate-icon.png" width="500" align="center">
-  <br>
-  <br>
-</p>
+# NFT based Photo MarketPlace
 
-<p align="center">
-  <!--
-  ### Status
-  [![Build Status](https://circleci.com/gh/alexdevero/react-typescript-styled-components-boilerplate.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/alexdevero/react-typescript-styled-components-boilerplate/)
-  -->
-  <a href="https://david-dm.org/alexdevero/react-typescript-styled-components-boilerplate">
-    <img alt="Dependency Status" src="https://badgen.net/david/dep/alexdevero/react-typescript-styled-components-boilerplate.svg?style=flat">
-  </a>
+***
 
-  <a href="https://david-dm.org/alexdevero/react-typescript-styled-components-boilerplate?type=dev">
-    <img alt="devDependency Status" src="https://badgen.net/david/dev/alexdevero/react-typescript-styled-components-boilerplate/dev-status.svg?style=flat">
-  </a>
+## 【Introduction of NFT based Photo MarketPlace】
+- NFT based Photo MarketPlace is the peer-to-peer Marketplace for buy and sell of photos which was uploaded by users.
+- It assume that uploaded photos in this marketplace are used as photos of news article.
+- Even if user has smartphone which include function of camera, anyone can become sellers by uploading photos in this MarketPlace.
+  - It mean that if user who is seller live in poor region and doesn't has bank account and so on, they can earn money by selling photos in this marketplace.
+- All of being uploaded photos are tokenized as NFT（Non-Fungible token). 
+- Uploaded photos buy/sell by using DAI for preventing risk of high volatility of crypto currency.
 
-  <a href="#">
-    <img alt="Releases" src="https://img.shields.io/github/release/alexdevero/react-typescript-styled-components-boilerplate.svg">
-  </a>
-</p>
 
-<p align="center">
-  <a href="https://alexdevero.com">
-    <img alt="Built by DEVERO" src="https://badgen.net/badge/build%20by/DEVERO/d30320" />
-  </a>
+&nbsp;
 
-  <a href="http://opensource.org/licenses/MIT">
-    <img alt="MIT License" src="https://badgen.net/badge/license/MIT/green">
-  </a>
-</p>
 
-## React - TypeScript - Styled-component boilerplate
+***
 
-Minimal React, TypeScript and Styled-components web app boilerplate.
+## 【Setup】
 
-### Table of contents
+### Setup private network by using Ganache-CLI
+1. Download Ganache-CLI from link below  
+https://www.trufflesuite.com/ganache  
 
-* [Install](#install)
-* [Usage](#usage)
-* [Support this project](#support-this-project)
-* [Code of Conduct](#code-of-conduct)
-* [License](#license)
 
-### Install
-
-#### Clone this repo
-
+2. Execute Ganache   
 ```
-$ git clone https://github.com/alexdevero/react-typescript-styled-components-boilerplate.git
+$ ganache-cli -d
+```
+※ `-d` option is the option in order to be able to use same address on Ganache-CLI every time.
+
+&nbsp;
+
+
+### Setup wallet by using Metamask
+1. Add MetaMask to browser (Chrome or FireFox or Opera or Brave)    
+https://metamask.io/  
+
+
+2. Adjust appropriate newwork below 
+```
+http://127.0.0.1:8545
 ```
 
-#### Install dependencies
+&nbsp;
 
-```
-yarn
-```
-or
-```
-npm install
-```
 
-### Usage
+### Setup backend
+1. Deploy contracts to private network of Ganache
+```
+(root directory)
 
-#### Start project on local server (go to localhost:1337)
-
-```
-yarn start
-```
-or
-```
-npm start
+$ npm run migrate:local
 ```
 
-#### Build project (in "dist" folder):
+&nbsp;
 
-```
-yarn run build
-```
-or
-```
-npm run build
-```
 
-#### Test project
-
+### Setup frontend
+1. NPM modules install
 ```
-yarn test
-```
-or
-```
-npm test
+$ cd client
+$ npm install
 ```
 
-### Support this project
+2. Execute command below in root directory.
+```
+$ cd ..
+$ npm run client
+```
 
-<!-- This project is released as an open-source. If you need help with using this project, please ask and I will do my best reply to as soon as possible. You can use this project as you wish *for free*. Also, you can change the source code and redistribute it if you want. -->
+3. Access to browser by using link 
+```
+http://127.0.0.1:3000
+```
 
-Development and maintenance of this project takes a lot of time. If you want to support this project and help its author, there are few ways you can do it:
+&nbsp;
 
- - Starring and sharing the project
- - [![Donate](https://img.shields.io/badge/Donate-Paypal-brightgreen.svg?colorB=259cd2)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YKLGUUB34ASEL)—make one-time donations via PayPal.
- - [![Donate](https://img.shields.io/badge/Donate-Patreon-brightgreen.svg?colorB=f86213)](https://www.patreon.com/alexdevero)—set up monthly donation via Patreon and get interesting news about what I'm doing.
- - <img alt="Releases" src="https://img.shields.io/badge/Donate-Bitcoin-brightgreen.svg?colorB=fab915">—send bitcoins or ethereum to this address: `19jHGagJWeVvuNjN3kaBoAszXd9ea9gKzp`.
+***
 
-Thank you!
 
-### Code of Conduct
+## 【Work flow】
 
-[Contributor Code of Conduct](code-of-conduct.md). By participating in this project you agree to abide by its terms.
+&nbsp;
 
-### License
+***
 
-MIT © [Alex Devero](https://alexdevero.com).
+## 【References】
+- Gitcoin（The Road to Devcon5）
+https://gitcoin.co/issue/ConsenSys/Road-To-Devcon-Relay/2
+https://gitcoin.co/issue/ConsenSys/ConsenSysGrants-Challenges/5/3497
+
+- Documents
+
